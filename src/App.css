@@ -5,23 +5,24 @@
   bottom: 0;
   left: 0;
   overflow: hidden;
+  min-width: 950px;
+  min-height: 600px;
 }
 
 .App-logo {
   animation: App-logo-spin infinite 20s linear;
-  height: 10vmin;
-  margin-top: 10px;
+  height: 60px;
 }
 
 .App-header {
   position: relative;
-  width: 100vw;
-  height: 25vh;
+  width: 100%;
+  height: 25%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: 22px;
   color: white;
   background-color: #282c34;
 }
@@ -33,4 +34,28 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App-ledger {
+  position: relative;
+  width: 80%;
+  height: 75%;
+  margin: 0 auto;
+}
+.App-layout-row {
+  position: relative;
+  width: 100%;
+  height: 45px;
+  line-height: 45px;
+  border-bottom: 1px solid #ccc;
+}
+.App-layout-col {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+.App-rotate-icon {
+  color: gold;
+  animation: App-logo-spin infinite 5s linear;
 }
