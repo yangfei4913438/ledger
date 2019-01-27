@@ -1,7 +1,10 @@
 // AntD的语言文件
-import Antd_zh_CN from 'antd/lib/locale-provider/zh_CN';
-import Antd_zh_TW from 'antd/lib/locale-provider/zh_TW';
+import Antd_zhCN from 'antd/lib/locale-provider/zh_CN';
+import Antd_zhTW from 'antd/lib/locale-provider/zh_TW';
 import Antd_en from 'antd/lib/locale-provider/en_US';
+import 'moment/locale/zh-cn';
+import 'moment/locale/zh-tw';
+import moment from 'moment';
 
 // 导入json文件必须写全扩展名，不能省略.json, 否则会出错的！
 import cn from './zh-cn.json';
@@ -9,10 +12,10 @@ import tw from './zh-tw.json';
 import en from './en.json';
 
 // 数据操作插件
-import data from '../tools/localStorage';
+import { LocalStorage } from 'yf-jstools'
 
 // 获取当前系统中可能存在的语言设置
-let language = data.getValue('lang');
+let language = LocalStorage.getValue('lang');
 
 // 获取浏览器语言
 function getLang () {
@@ -35,7 +38,7 @@ function getLang () {
 if (!language) {
   language = getLang();
   // 重新存储语言类型
-  data.setValue('lang', language)
+  LocalStorage.setValue('lang', language)
 }
 
 // 定义一个语言变量
@@ -46,19 +49,22 @@ let antdLang = Antd_en;
 switch (language) {
   case 'zh-cn':
     jsonLang = cn;
-    antdLang = Antd_zh_CN;
+    antdLang = Antd_zhCN;
+    moment.locale('zh-cn');
     break;
   case 'zh-tw':
     jsonLang = tw;
-    antdLang = Antd_zh_TW;
+    antdLang = Antd_zhTW;
+    moment.locale('zh-tw');
     break;
   default:
     jsonLang = en;
     antdLang = Antd_en;
+    moment.locale()
 }
 
 // 导出语言
-export default {
+export {
   jsonLang,
   antdLang
 };

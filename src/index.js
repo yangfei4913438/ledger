@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import App from './App';
 import 'antd/dist/antd.css';
 import { LocaleProvider } from 'antd';
-import lang from './lang'
+import { antdLang } from './lang'
+import axios from './axios'
 
 // 字体库
 import { library } from '@fortawesome/fontawesome-svg-core';
@@ -12,4 +13,7 @@ import { far } from '@fortawesome/free-regular-svg-icons';
 import { fab } from '@fortawesome/free-brands-svg-icons';
 library.add(fas, far, fab);
 
-ReactDOM.render(<LocaleProvider locale={lang.antdLang}><App /></LocaleProvider>, document.getElementById('root'));
+// 用拦截器封装 App 组件
+const HocApp = axios(App);
+
+ReactDOM.render(<LocaleProvider locale={antdLang}><HocApp /></LocaleProvider>, document.getElementById('root'));
