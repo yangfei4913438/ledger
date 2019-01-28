@@ -7,6 +7,7 @@ import { jsonLang } from './lang'
 import ExportJsonExcel from 'js-export-excel';
 import { LocalStorage } from 'yf-jstools'
 import List from './components/list'
+import TotalPrice from './components/TotalPrice'
 
 class App extends Component {
   constructor(props) {
@@ -75,11 +76,10 @@ class App extends Component {
               <MonthPicker onChange={this.selectDate}/>
             </Col>
             <Col span={9} pull={2} className={'App-title-font'}>
-              <span style={{marginRight: '20px'}}>{jsonLang.label.income}: {this.state.total_income} {jsonLang.label.yuan}</span>
-              <span>{jsonLang.label.expense}: {this.state.total_expense} {jsonLang.label.yuan}</span>
+              <TotalPrice total_income={this.state.total_income} total_expense={this.state.total_expense} />
             </Col>
             <Col span={6} style={{textAlign: 'right'}}>
-              <Radio.Group buttonStyle="solid" size={"default"} onChange={this.changeLang}>
+              <Radio.Group defaultValue={this.state.defaultLang} buttonStyle="solid" size={"default"} onChange={this.changeLang}>
                 <Radio.Button value="zh-cn">简体中文</Radio.Button>
                 <Radio.Button value="zh-tw">繁體中文</Radio.Button>
                 <Radio.Button value="en">English</Radio.Button>

@@ -12,9 +12,9 @@ import tw from './zh-tw.json';
 import en from './en.json';
 
 // 数据操作插件
-import { LocalStorage } from 'yf-jstools'
+import { LocalStorage } from 'yf-jstools';
 
-// 获取当前系统中可能存在的语言设置
+// 获取语言设置
 let language = LocalStorage.getValue('lang');
 
 // 获取浏览器语言
