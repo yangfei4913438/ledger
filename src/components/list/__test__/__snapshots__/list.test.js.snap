@@ -1,0 +1,1463 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试价格列表组件 匹配组件快照 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <List
+    deleteItem={[MockFunction]}
+    list={
+      Array [
+        Object {
+          "date": "2019-01-01",
+          "event": "去云南旅游",
+          "icon": Array [
+            "fas",
+            "plane",
+          ],
+          "id": 1,
+          "price": 200,
+          "type": "expense",
+        },
+        Object {
+          "date": "2019-02-06",
+          "event": "奖金收入",
+          "icon": Array [
+            "fas",
+            "hand-holding-usd",
+          ],
+          "id": 2,
+          "price": 80000,
+          "type": "income",
+        },
+      ]
+    }
+    modifyItem={[MockFunction]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": Array [
+        <Row
+          className="App-layout-row"
+          gutter={0}
+        >
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="App-rotate-icon"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Array [
+                  "fas",
+                  "plane",
+                ]
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform="shrink--8"
+            />
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={10}
+          >
+            去云南旅游
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={4}
+          >
+            -200
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={4}
+          >
+            2019-01-01
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <Button
+              block={false}
+              ghost={false}
+              loading={false}
+              onClick={[Function]}
+              type="primary"
+            >
+              Edit
+            </Button>
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <Button
+              block={false}
+              ghost={false}
+              loading={false}
+              onClick={[Function]}
+              type="danger"
+            >
+              Delete
+            </Button>
+          </Col>
+        </Row>,
+        <Row
+          className="App-layout-row"
+          gutter={0}
+        >
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <FontAwesomeIcon
+              border={false}
+              className="App-rotate-icon"
+              fixedWidth={false}
+              flip={null}
+              icon={
+                Array [
+                  "fas",
+                  "hand-holding-usd",
+                ]
+              }
+              inverse={false}
+              listItem={false}
+              mask={null}
+              pull={null}
+              pulse={false}
+              rotation={null}
+              size={null}
+              spin={false}
+              symbol={false}
+              title=""
+              transform="shrink--8"
+            />
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={10}
+          >
+            奖金收入
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={4}
+          >
+            +80000
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={4}
+          >
+            2019-02-06
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <Button
+              block={false}
+              ghost={false}
+              loading={false}
+              onClick={[Function]}
+              type="primary"
+            >
+              Edit
+            </Button>
+          </Col>
+          <Col
+            className="App-layout-col"
+            span={2}
+          >
+            <Button
+              block={false}
+              ghost={false}
+              loading={false}
+              onClick={[Function]}
+              type="danger"
+            >
+              Delete
+            </Button>
+          </Col>
+        </Row>,
+      ],
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": "1",
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "plane",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={10}
+            >
+              去云南旅游
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              -200
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              2019-01-01
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>
+            </Col>,
+          ],
+          "className": "App-layout-row",
+          "gutter": 0,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "plane",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "App-rotate-icon",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Array [
+                  "fas",
+                  "plane",
+                ],
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": "shrink--8",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "去云南旅游",
+              "className": "App-layout-col",
+              "span": 10,
+            },
+            "ref": null,
+            "rendered": "去云南旅游",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "-200",
+              "className": "App-layout-col",
+              "span": 4,
+            },
+            "ref": null,
+            "rendered": "-200",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "2019-01-01",
+              "className": "App-layout-col",
+              "span": 4,
+            },
+            "ref": null,
+            "rendered": "2019-01-01",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "children": "Edit",
+                "ghost": false,
+                "loading": false,
+                "onClick": [Function],
+                "type": "primary",
+              },
+              "ref": null,
+              "rendered": "Edit",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "children": "Delete",
+                "ghost": false,
+                "loading": false,
+                "onClick": [Function],
+                "type": "danger",
+              },
+              "ref": null,
+              "rendered": "Delete",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      Object {
+        "instance": null,
+        "key": "2",
+        "nodeType": "class",
+        "props": Object {
+          "children": Array [
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "hand-holding-usd",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={10}
+            >
+              奖金收入
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              +80000
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              2019-02-06
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>
+            </Col>,
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>
+            </Col>,
+          ],
+          "className": "App-layout-row",
+          "gutter": 0,
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "hand-holding-usd",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "border": false,
+                "className": "App-rotate-icon",
+                "fixedWidth": false,
+                "flip": null,
+                "icon": Array [
+                  "fas",
+                  "hand-holding-usd",
+                ],
+                "inverse": false,
+                "listItem": false,
+                "mask": null,
+                "pull": null,
+                "pulse": false,
+                "rotation": null,
+                "size": null,
+                "spin": false,
+                "symbol": false,
+                "title": "",
+                "transform": "shrink--8",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "奖金收入",
+              "className": "App-layout-col",
+              "span": 10,
+            },
+            "ref": null,
+            "rendered": "奖金收入",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "+80000",
+              "className": "App-layout-col",
+              "span": 4,
+            },
+            "ref": null,
+            "rendered": "+80000",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": "2019-02-06",
+              "className": "App-layout-col",
+              "span": 4,
+            },
+            "ref": null,
+            "rendered": "2019-02-06",
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "children": "Edit",
+                "ghost": false,
+                "loading": false,
+                "onClick": [Function],
+                "type": "primary",
+              },
+              "ref": null,
+              "rendered": "Edit",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>,
+              "className": "App-layout-col",
+              "span": 2,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "block": false,
+                "children": "Delete",
+                "ghost": false,
+                "loading": false,
+                "onClick": [Function],
+                "type": "danger",
+              },
+              "ref": null,
+              "rendered": "Delete",
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+    ],
+    "type": Symbol(react.fragment),
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": Array [
+          <Row
+            className="App-layout-row"
+            gutter={0}
+          >
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "plane",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={10}
+            >
+              去云南旅游
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              -200
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              2019-01-01
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>
+            </Col>
+          </Row>,
+          <Row
+            className="App-layout-row"
+            gutter={0}
+          >
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <FontAwesomeIcon
+                border={false}
+                className="App-rotate-icon"
+                fixedWidth={false}
+                flip={null}
+                icon={
+                  Array [
+                    "fas",
+                    "hand-holding-usd",
+                  ]
+                }
+                inverse={false}
+                listItem={false}
+                mask={null}
+                pull={null}
+                pulse={false}
+                rotation={null}
+                size={null}
+                spin={false}
+                symbol={false}
+                title=""
+                transform="shrink--8"
+              />
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={10}
+            >
+              奖金收入
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              +80000
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={4}
+            >
+              2019-02-06
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                Edit
+              </Button>
+            </Col>
+            <Col
+              className="App-layout-col"
+              span={2}
+            >
+              <Button
+                block={false}
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="danger"
+              >
+                Delete
+              </Button>
+            </Col>
+          </Row>,
+        ],
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": "1",
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className="App-rotate-icon"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Array [
+                      "fas",
+                      "plane",
+                    ]
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform="shrink--8"
+                />
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={10}
+              >
+                去云南旅游
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={4}
+              >
+                -200
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={4}
+              >
+                2019-01-01
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  Edit
+                </Button>
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="danger"
+                >
+                  Delete
+                </Button>
+              </Col>,
+            ],
+            "className": "App-layout-row",
+            "gutter": 0,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <FontAwesomeIcon
+                  border={false}
+                  className="App-rotate-icon"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Array [
+                      "fas",
+                      "plane",
+                    ]
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform="shrink--8"
+                />,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "App-rotate-icon",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Array [
+                    "fas",
+                    "plane",
+                  ],
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": "shrink--8",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "去云南旅游",
+                "className": "App-layout-col",
+                "span": 10,
+              },
+              "ref": null,
+              "rendered": "去云南旅游",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "-200",
+                "className": "App-layout-col",
+                "span": 4,
+              },
+              "ref": null,
+              "rendered": "-200",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "2019-01-01",
+                "className": "App-layout-col",
+                "span": 4,
+              },
+              "ref": null,
+              "rendered": "2019-01-01",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  Edit
+                </Button>,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "children": "Edit",
+                  "ghost": false,
+                  "loading": false,
+                  "onClick": [Function],
+                  "type": "primary",
+                },
+                "ref": null,
+                "rendered": "Edit",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="danger"
+                >
+                  Delete
+                </Button>,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "children": "Delete",
+                  "ghost": false,
+                  "loading": false,
+                  "onClick": [Function],
+                  "type": "danger",
+                },
+                "ref": null,
+                "rendered": "Delete",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        Object {
+          "instance": null,
+          "key": "2",
+          "nodeType": "class",
+          "props": Object {
+            "children": Array [
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className="App-rotate-icon"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Array [
+                      "fas",
+                      "hand-holding-usd",
+                    ]
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform="shrink--8"
+                />
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={10}
+              >
+                奖金收入
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={4}
+              >
+                +80000
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={4}
+              >
+                2019-02-06
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  Edit
+                </Button>
+              </Col>,
+              <Col
+                className="App-layout-col"
+                span={2}
+              >
+                <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="danger"
+                >
+                  Delete
+                </Button>
+              </Col>,
+            ],
+            "className": "App-layout-row",
+            "gutter": 0,
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <FontAwesomeIcon
+                  border={false}
+                  className="App-rotate-icon"
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Array [
+                      "fas",
+                      "hand-holding-usd",
+                    ]
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  symbol={false}
+                  title=""
+                  transform="shrink--8"
+                />,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "border": false,
+                  "className": "App-rotate-icon",
+                  "fixedWidth": false,
+                  "flip": null,
+                  "icon": Array [
+                    "fas",
+                    "hand-holding-usd",
+                  ],
+                  "inverse": false,
+                  "listItem": false,
+                  "mask": null,
+                  "pull": null,
+                  "pulse": false,
+                  "rotation": null,
+                  "size": null,
+                  "spin": false,
+                  "symbol": false,
+                  "title": "",
+                  "transform": "shrink--8",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "奖金收入",
+                "className": "App-layout-col",
+                "span": 10,
+              },
+              "ref": null,
+              "rendered": "奖金收入",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "+80000",
+                "className": "App-layout-col",
+                "span": 4,
+              },
+              "ref": null,
+              "rendered": "+80000",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": "2019-02-06",
+                "className": "App-layout-col",
+                "span": 4,
+              },
+              "ref": null,
+              "rendered": "2019-02-06",
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  Edit
+                </Button>,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "children": "Edit",
+                  "ghost": false,
+                  "loading": false,
+                  "onClick": [Function],
+                  "type": "primary",
+                },
+                "ref": null,
+                "rendered": "Edit",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Button
+                  block={false}
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="danger"
+                >
+                  Delete
+                </Button>,
+                "className": "App-layout-col",
+                "span": 2,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "block": false,
+                  "children": "Delete",
+                  "ghost": false,
+                  "loading": false,
+                  "onClick": [Function],
+                  "type": "danger",
+                },
+                "ref": null,
+                "rendered": "Delete",
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+      ],
+      "type": Symbol(react.fragment),
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
