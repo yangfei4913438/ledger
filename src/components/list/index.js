@@ -7,13 +7,6 @@ const List = (props) => {
   const { list, deleteItem, modifyItem } = props;
   return (
     <Fragment>
-      <Row className="App-layout-row">
-        <Col span={2} className="App-layout-col App-table-th">{jsonLang.label.type}</Col>
-        <Col span={10} className="App-layout-col App-table-th">{jsonLang.label.title}</Col>
-        <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.price}({jsonLang.label.yuan})</Col>
-        <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.date}</Col>
-        <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.operation}</Col>
-      </Row>
       {
         list.map(item => {
           return (

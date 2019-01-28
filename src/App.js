@@ -98,6 +98,13 @@ class App extends Component {
                 <FontAwesomeIcon icon={['fas','plus-circle']} style={{marginRight: '8px'}} transform="shrink--8"/>
                 {jsonLang.btn.add_record}
               </Button>
+              <Row className="App-layout-row">
+                <Col span={2} className="App-layout-col App-table-th">{jsonLang.label.type}</Col>
+                <Col span={10} className="App-layout-col App-table-th">{jsonLang.label.title}</Col>
+                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.price}({jsonLang.label.yuan})</Col>
+                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.date}</Col>
+                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.operation}</Col>
+              </Row>
               <List
                 list={this.state.choose_date ? this.state.list.filter(o => o.date.includes(this.state.choose_date)) : this.state.list}
                 modifyItem={this.modifyItem}
