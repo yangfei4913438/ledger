@@ -54,6 +54,14 @@ describe('测试价格列表组件', () => {
     // 测试第一行的标题(因为antd组件的原因，所以这里需要通过props().children的方式来获取text内容)
     expect(firstLineCols.at(1).props().children).toEqual('去云南旅游');
   });
+  it('渲染出的列表行，金额是否正确', () => {
+    // 拿到所有的行
+    const lineList = wrapper.find('.App-layout-row');
+    // 取第一行的所有列
+    const firstLineCols = lineList.first().find('.App-layout-col');
+    // 测试第一行的标题(因为antd组件的原因，所以这里需要通过props().children的方式来获取text内容)
+    expect(firstLineCols.at(2).props().children).toEqual('-200');
+  });
   it('模拟鼠标点击事件', () => {
     // 拿到所有的行
     const lineList = wrapper.find('.App-layout-row');
