@@ -23,6 +23,7 @@ describe('测试home组件', () => {
   it('测试新增记录', () => {
     // 点击事件
     wrapper.find('.App-add-record').simulate('click');
+    // wrapper.state('list') 就是取组件内this.state中的list属性值
     expect(wrapper.state('list').length).toEqual(4);
     // 再次点击
     wrapper.find('.App-add-record').simulate('click');
