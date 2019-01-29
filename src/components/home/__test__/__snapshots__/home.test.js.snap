@@ -1,0 +1,3446 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`测试home组件 匹配组件快照 1`] = `
+ShallowWrapper {
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Home />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "checkPropTypes": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateError": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <header
+          className="App-header"
+        >
+          <img
+            alt="logo"
+            className="App-logo"
+            src="logo.svg"
+          />
+          <p>
+            Welcome to React
+          </p>
+        </header>,
+        <div
+          className="App-ledger"
+        >
+          <Row
+            align="middle"
+            gutter={0}
+            justify="space-between"
+            style={
+              Object {
+                "borderBottom": "1px solid #ccc",
+                "height": "60px",
+                "marginBottom": "15px",
+              }
+            }
+            type="flex"
+          >
+            <Col
+              span={4}
+            >
+              <PickerWrapper
+                locale={Object {}}
+                onChange={[Function]}
+                onOk={[Function]}
+                onOpenChange={[Function]}
+                popupStyle={Object {}}
+                transitionName="slide-up"
+              />
+            </Col>
+            <Col
+              className="App-title-font"
+              pull={2}
+              span={9}
+            >
+              <TotalPrice
+                total_expense={5200}
+                total_income={80000}
+              />
+            </Col>
+            <Col
+              span={6}
+              style={
+                Object {
+                  "textAlign": "right",
+                }
+              }
+            >
+              <RadioGroup
+                buttonStyle="solid"
+                defaultValue="en-us"
+                disabled={false}
+                onChange={[Function]}
+                size="default"
+              >
+                <RadioButton
+                  value="zh-cn"
+                >
+                  简体中文
+                </RadioButton>
+                <RadioButton
+                  value="zh-tw"
+                >
+                  繁體中文
+                </RadioButton>
+                <RadioButton
+                  value="en"
+                >
+                  English
+                </RadioButton>
+              </RadioGroup>
+            </Col>
+          </Row>
+          <Tabs
+            hideAdd={false}
+            tabPosition="top"
+            type="card"
+          >
+            <TabPane
+              placeholder={null}
+              tab={
+                <span>
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Array [
+                        "fas",
+                        "book",
+                      ]
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  List Mode
+                </span>
+              }
+            >
+              <Row
+                align="middle"
+                gutter={0}
+                justify="space-between"
+                type="flex"
+              >
+                <Col
+                  span={4}
+                />
+                <Col
+                  span={3}
+                  style={
+                    Object {
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  <Button
+                    block={false}
+                    ghost={false}
+                    loading={false}
+                    onClick={[Function]}
+                    size="small"
+                    type="primary"
+                  >
+                    Table Download
+                  </Button>
+                </Col>
+              </Row>
+              <Button
+                block={false}
+                className="App-add-record"
+                ghost={false}
+                loading={false}
+                onClick={[Function]}
+                type="primary"
+              >
+                <FontAwesomeIcon
+                  border={false}
+                  className=""
+                  fixedWidth={false}
+                  flip={null}
+                  icon={
+                    Array [
+                      "fas",
+                      "plus-circle",
+                    ]
+                  }
+                  inverse={false}
+                  listItem={false}
+                  mask={null}
+                  pull={null}
+                  pulse={false}
+                  rotation={null}
+                  size={null}
+                  spin={false}
+                  style={
+                    Object {
+                      "marginRight": "8px",
+                    }
+                  }
+                  symbol={false}
+                  title=""
+                  transform="shrink--8"
+                />
+                Create a new accounting record
+              </Button>
+              <Row
+                className="App-layout-row"
+                gutter={0}
+              >
+                <Col
+                  className="App-layout-col App-table-th"
+                  span={2}
+                >
+                  Type
+                </Col>
+                <Col
+                  className="App-layout-col App-table-th"
+                  span={10}
+                >
+                  Title
+                </Col>
+                <Col
+                  className="App-layout-col App-table-th"
+                  span={4}
+                >
+                  Price
+                  (
+                  Yuan
+                  )
+                </Col>
+                <Col
+                  className="App-layout-col App-table-th"
+                  span={4}
+                >
+                  Date
+                </Col>
+                <Col
+                  className="App-layout-col App-table-th"
+                  span={4}
+                >
+                  Operation
+                </Col>
+              </Row>
+              <List
+                deleteItem={[Function]}
+                list={
+                  Array [
+                    Object {
+                      "date": "2019-01-01",
+                      "event": "去云南旅游",
+                      "icon": Array [
+                        "fas",
+                        "plane",
+                      ],
+                      "id": 1,
+                      "price": 200,
+                      "type": "expense",
+                    },
+                    Object {
+                      "date": "2019-02-06",
+                      "event": "奖金收入",
+                      "icon": Array [
+                        "fas",
+                        "hand-holding-usd",
+                      ],
+                      "id": 2,
+                      "price": 80000,
+                      "type": "income",
+                    },
+                    Object {
+                      "date": "2019-03-10",
+                      "event": "游泳卡",
+                      "icon": Array [
+                        "fas",
+                        "swimmer",
+                      ],
+                      "id": 3,
+                      "price": 5000,
+                      "type": "expense",
+                    },
+                  ]
+                }
+                modifyItem={[Function]}
+              />
+            </TabPane>
+            <TabPane
+              placeholder={null}
+              tab={
+                <span>
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Array [
+                        "fas",
+                        "chart-pie",
+                      ]
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    symbol={false}
+                    title=""
+                    transform={null}
+                  />
+                   
+                  Chart Mode
+                </span>
+              }
+            >
+              Content of Tab Pane 2
+            </TabPane>
+          </Tabs>
+        </div>,
+      ],
+      "className": "App",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <img
+              alt="logo"
+              className="App-logo"
+              src="logo.svg"
+            />,
+            <p>
+              Welcome to React
+            </p>,
+          ],
+          "className": "App-header",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "alt": "logo",
+              "className": "App-logo",
+              "src": "logo.svg",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "img",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Welcome to React",
+            },
+            "ref": null,
+            "rendered": "Welcome to React",
+            "type": "p",
+          },
+        ],
+        "type": "header",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <Row
+              align="middle"
+              gutter={0}
+              justify="space-between"
+              style={
+                Object {
+                  "borderBottom": "1px solid #ccc",
+                  "height": "60px",
+                  "marginBottom": "15px",
+                }
+              }
+              type="flex"
+            >
+              <Col
+                span={4}
+              >
+                <PickerWrapper
+                  locale={Object {}}
+                  onChange={[Function]}
+                  onOk={[Function]}
+                  onOpenChange={[Function]}
+                  popupStyle={Object {}}
+                  transitionName="slide-up"
+                />
+              </Col>
+              <Col
+                className="App-title-font"
+                pull={2}
+                span={9}
+              >
+                <TotalPrice
+                  total_expense={5200}
+                  total_income={80000}
+                />
+              </Col>
+              <Col
+                span={6}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <RadioGroup
+                  buttonStyle="solid"
+                  defaultValue="en-us"
+                  disabled={false}
+                  onChange={[Function]}
+                  size="default"
+                >
+                  <RadioButton
+                    value="zh-cn"
+                  >
+                    简体中文
+                  </RadioButton>
+                  <RadioButton
+                    value="zh-tw"
+                  >
+                    繁體中文
+                  </RadioButton>
+                  <RadioButton
+                    value="en"
+                  >
+                    English
+                  </RadioButton>
+                </RadioGroup>
+              </Col>
+            </Row>,
+            <Tabs
+              hideAdd={false}
+              tabPosition="top"
+              type="card"
+            >
+              <TabPane
+                placeholder={null}
+                tab={
+                  <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "book",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    List Mode
+                  </span>
+                }
+              >
+                <Row
+                  align="middle"
+                  gutter={0}
+                  justify="space-between"
+                  type="flex"
+                >
+                  <Col
+                    span={4}
+                  />
+                  <Col
+                    span={3}
+                    style={
+                      Object {
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <Button
+                      block={false}
+                      ghost={false}
+                      loading={false}
+                      onClick={[Function]}
+                      size="small"
+                      type="primary"
+                    >
+                      Table Download
+                    </Button>
+                  </Col>
+                </Row>
+                <Button
+                  block={false}
+                  className="App-add-record"
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Array [
+                        "fas",
+                        "plus-circle",
+                      ]
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "marginRight": "8px",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform="shrink--8"
+                  />
+                  Create a new accounting record
+                </Button>
+                <Row
+                  className="App-layout-row"
+                  gutter={0}
+                >
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={2}
+                  >
+                    Type
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={10}
+                  >
+                    Title
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Price
+                    (
+                    Yuan
+                    )
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Date
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Operation
+                  </Col>
+                </Row>
+                <List
+                  deleteItem={[Function]}
+                  list={
+                    Array [
+                      Object {
+                        "date": "2019-01-01",
+                        "event": "去云南旅游",
+                        "icon": Array [
+                          "fas",
+                          "plane",
+                        ],
+                        "id": 1,
+                        "price": 200,
+                        "type": "expense",
+                      },
+                      Object {
+                        "date": "2019-02-06",
+                        "event": "奖金收入",
+                        "icon": Array [
+                          "fas",
+                          "hand-holding-usd",
+                        ],
+                        "id": 2,
+                        "price": 80000,
+                        "type": "income",
+                      },
+                      Object {
+                        "date": "2019-03-10",
+                        "event": "游泳卡",
+                        "icon": Array [
+                          "fas",
+                          "swimmer",
+                        ],
+                        "id": 3,
+                        "price": 5000,
+                        "type": "expense",
+                      },
+                    ]
+                  }
+                  modifyItem={[Function]}
+                />
+              </TabPane>
+              <TabPane
+                placeholder={null}
+                tab={
+                  <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "chart-pie",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Chart Mode
+                  </span>
+                }
+              >
+                Content of Tab Pane 2
+              </TabPane>
+            </Tabs>,
+          ],
+          "className": "App-ledger",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "align": "middle",
+              "children": Array [
+                <Col
+                  span={4}
+                >
+                  <PickerWrapper
+                    locale={Object {}}
+                    onChange={[Function]}
+                    onOk={[Function]}
+                    onOpenChange={[Function]}
+                    popupStyle={Object {}}
+                    transitionName="slide-up"
+                  />
+                </Col>,
+                <Col
+                  className="App-title-font"
+                  pull={2}
+                  span={9}
+                >
+                  <TotalPrice
+                    total_expense={5200}
+                    total_income={80000}
+                  />
+                </Col>,
+                <Col
+                  span={6}
+                  style={
+                    Object {
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  <RadioGroup
+                    buttonStyle="solid"
+                    defaultValue="en-us"
+                    disabled={false}
+                    onChange={[Function]}
+                    size="default"
+                  >
+                    <RadioButton
+                      value="zh-cn"
+                    >
+                      简体中文
+                    </RadioButton>
+                    <RadioButton
+                      value="zh-tw"
+                    >
+                      繁體中文
+                    </RadioButton>
+                    <RadioButton
+                      value="en"
+                    >
+                      English
+                    </RadioButton>
+                  </RadioGroup>
+                </Col>,
+              ],
+              "gutter": 0,
+              "justify": "space-between",
+              "style": Object {
+                "borderBottom": "1px solid #ccc",
+                "height": "60px",
+                "marginBottom": "15px",
+              },
+              "type": "flex",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <PickerWrapper
+                    locale={Object {}}
+                    onChange={[Function]}
+                    onOk={[Function]}
+                    onOpenChange={[Function]}
+                    popupStyle={Object {}}
+                    transitionName="slide-up"
+                  />,
+                  "span": 4,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "locale": Object {},
+                    "onChange": [Function],
+                    "onOk": [Function],
+                    "onOpenChange": [Function],
+                    "popupStyle": Object {},
+                    "transitionName": "slide-up",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <TotalPrice
+                    total_expense={5200}
+                    total_income={80000}
+                  />,
+                  "className": "App-title-font",
+                  "pull": 2,
+                  "span": 9,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "total_expense": 5200,
+                    "total_income": 80000,
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <RadioGroup
+                    buttonStyle="solid"
+                    defaultValue="en-us"
+                    disabled={false}
+                    onChange={[Function]}
+                    size="default"
+                  >
+                    <RadioButton
+                      value="zh-cn"
+                    >
+                      简体中文
+                    </RadioButton>
+                    <RadioButton
+                      value="zh-tw"
+                    >
+                      繁體中文
+                    </RadioButton>
+                    <RadioButton
+                      value="en"
+                    >
+                      English
+                    </RadioButton>
+                  </RadioGroup>,
+                  "span": 6,
+                  "style": Object {
+                    "textAlign": "right",
+                  },
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "buttonStyle": "solid",
+                    "children": Array [
+                      <RadioButton
+                        value="zh-cn"
+                      >
+                        简体中文
+                      </RadioButton>,
+                      <RadioButton
+                        value="zh-tw"
+                      >
+                        繁體中文
+                      </RadioButton>,
+                      <RadioButton
+                        value="en"
+                      >
+                        English
+                      </RadioButton>,
+                    ],
+                    "defaultValue": "en-us",
+                    "disabled": false,
+                    "onChange": [Function],
+                    "size": "default",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "简体中文",
+                        "value": "zh-cn",
+                      },
+                      "ref": null,
+                      "rendered": "简体中文",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "繁體中文",
+                        "value": "zh-tw",
+                      },
+                      "ref": null,
+                      "rendered": "繁體中文",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": "English",
+                        "value": "en",
+                      },
+                      "ref": null,
+                      "rendered": "English",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "children": Array [
+                <TabPane
+                  placeholder={null}
+                  tab={
+                    <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "book",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      List Mode
+                    </span>
+                  }
+                >
+                  <Row
+                    align="middle"
+                    gutter={0}
+                    justify="space-between"
+                    type="flex"
+                  >
+                    <Col
+                      span={4}
+                    />
+                    <Col
+                      span={3}
+                      style={
+                        Object {
+                          "textAlign": "right",
+                        }
+                      }
+                    >
+                      <Button
+                        block={false}
+                        ghost={false}
+                        loading={false}
+                        onClick={[Function]}
+                        size="small"
+                        type="primary"
+                      >
+                        Table Download
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Button
+                    block={false}
+                    className="App-add-record"
+                    ghost={false}
+                    loading={false}
+                    onClick={[Function]}
+                    type="primary"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "plus-circle",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "marginRight": "8px",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform="shrink--8"
+                    />
+                    Create a new accounting record
+                  </Button>
+                  <Row
+                    className="App-layout-row"
+                    gutter={0}
+                  >
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={2}
+                    >
+                      Type
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={10}
+                    >
+                      Title
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Price
+                      (
+                      Yuan
+                      )
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Date
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Operation
+                    </Col>
+                  </Row>
+                  <List
+                    deleteItem={[Function]}
+                    list={
+                      Array [
+                        Object {
+                          "date": "2019-01-01",
+                          "event": "去云南旅游",
+                          "icon": Array [
+                            "fas",
+                            "plane",
+                          ],
+                          "id": 1,
+                          "price": 200,
+                          "type": "expense",
+                        },
+                        Object {
+                          "date": "2019-02-06",
+                          "event": "奖金收入",
+                          "icon": Array [
+                            "fas",
+                            "hand-holding-usd",
+                          ],
+                          "id": 2,
+                          "price": 80000,
+                          "type": "income",
+                        },
+                        Object {
+                          "date": "2019-03-10",
+                          "event": "游泳卡",
+                          "icon": Array [
+                            "fas",
+                            "swimmer",
+                          ],
+                          "id": 3,
+                          "price": 5000,
+                          "type": "expense",
+                        },
+                      ]
+                    }
+                    modifyItem={[Function]}
+                  />
+                </TabPane>,
+                <TabPane
+                  placeholder={null}
+                  tab={
+                    <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "chart-pie",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Chart Mode
+                    </span>
+                  }
+                >
+                  Content of Tab Pane 2
+                </TabPane>,
+              ],
+              "hideAdd": false,
+              "tabPosition": "top",
+              "type": "card",
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": "1",
+                "nodeType": "class",
+                "props": Object {
+                  "children": Array [
+                    <Row
+                      align="middle"
+                      gutter={0}
+                      justify="space-between"
+                      type="flex"
+                    >
+                      <Col
+                        span={4}
+                      />
+                      <Col
+                        span={3}
+                        style={
+                          Object {
+                            "textAlign": "right",
+                          }
+                        }
+                      >
+                        <Button
+                          block={false}
+                          ghost={false}
+                          loading={false}
+                          onClick={[Function]}
+                          size="small"
+                          type="primary"
+                        >
+                          Table Download
+                        </Button>
+                      </Col>
+                    </Row>,
+                    <Button
+                      block={false}
+                      className="App-add-record"
+                      ghost={false}
+                      loading={false}
+                      onClick={[Function]}
+                      type="primary"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "plus-circle",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "marginRight": "8px",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform="shrink--8"
+                      />
+                      Create a new accounting record
+                    </Button>,
+                    <Row
+                      className="App-layout-row"
+                      gutter={0}
+                    >
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={2}
+                      >
+                        Type
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={10}
+                      >
+                        Title
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Price
+                        (
+                        Yuan
+                        )
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Date
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Operation
+                      </Col>
+                    </Row>,
+                    <List
+                      deleteItem={[Function]}
+                      list={
+                        Array [
+                          Object {
+                            "date": "2019-01-01",
+                            "event": "去云南旅游",
+                            "icon": Array [
+                              "fas",
+                              "plane",
+                            ],
+                            "id": 1,
+                            "price": 200,
+                            "type": "expense",
+                          },
+                          Object {
+                            "date": "2019-02-06",
+                            "event": "奖金收入",
+                            "icon": Array [
+                              "fas",
+                              "hand-holding-usd",
+                            ],
+                            "id": 2,
+                            "price": 80000,
+                            "type": "income",
+                          },
+                          Object {
+                            "date": "2019-03-10",
+                            "event": "游泳卡",
+                            "icon": Array [
+                              "fas",
+                              "swimmer",
+                            ],
+                            "id": 3,
+                            "price": 5000,
+                            "type": "expense",
+                          },
+                        ]
+                      }
+                      modifyItem={[Function]}
+                    />,
+                  ],
+                  "placeholder": null,
+                  "tab": <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "book",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    List Mode
+                  </span>,
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "align": "middle",
+                      "children": Array [
+                        <Col
+                          span={4}
+                        />,
+                        <Col
+                          span={3}
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          <Button
+                            block={false}
+                            ghost={false}
+                            loading={false}
+                            onClick={[Function]}
+                            size="small"
+                            type="primary"
+                          >
+                            Table Download
+                          </Button>
+                        </Col>,
+                      ],
+                      "gutter": 0,
+                      "justify": "space-between",
+                      "type": "flex",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "span": 4,
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": <Button
+                            block={false}
+                            ghost={false}
+                            loading={false}
+                            onClick={[Function]}
+                            size="small"
+                            type="primary"
+                          >
+                            Table Download
+                          </Button>,
+                          "span": 3,
+                          "style": Object {
+                            "textAlign": "right",
+                          },
+                        },
+                        "ref": null,
+                        "rendered": Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "block": false,
+                            "children": "Table Download",
+                            "ghost": false,
+                            "loading": false,
+                            "onClick": [Function],
+                            "size": "small",
+                            "type": "primary",
+                          },
+                          "ref": null,
+                          "rendered": "Table Download",
+                          "type": [Function],
+                        },
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "block": false,
+                      "children": Array [
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Array [
+                              "fas",
+                              "plus-circle",
+                            ]
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "marginRight": "8px",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform="shrink--8"
+                        />,
+                        "Create a new accounting record",
+                      ],
+                      "className": "App-add-record",
+                      "ghost": false,
+                      "loading": false,
+                      "onClick": [Function],
+                      "type": "primary",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "function",
+                        "props": Object {
+                          "border": false,
+                          "className": "",
+                          "fixedWidth": false,
+                          "flip": null,
+                          "icon": Array [
+                            "fas",
+                            "plus-circle",
+                          ],
+                          "inverse": false,
+                          "listItem": false,
+                          "mask": null,
+                          "pull": null,
+                          "pulse": false,
+                          "rotation": null,
+                          "size": null,
+                          "spin": false,
+                          "style": Object {
+                            "marginRight": "8px",
+                          },
+                          "symbol": false,
+                          "title": "",
+                          "transform": "shrink--8",
+                        },
+                        "ref": null,
+                        "rendered": null,
+                        "type": [Function],
+                      },
+                      "Create a new accounting record",
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "children": Array [
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={2}
+                        >
+                          Type
+                        </Col>,
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={10}
+                        >
+                          Title
+                        </Col>,
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Price
+                          (
+                          Yuan
+                          )
+                        </Col>,
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Date
+                        </Col>,
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Operation
+                        </Col>,
+                      ],
+                      "className": "App-layout-row",
+                      "gutter": 0,
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Type",
+                          "className": "App-layout-col App-table-th",
+                          "span": 2,
+                        },
+                        "ref": null,
+                        "rendered": "Type",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Title",
+                          "className": "App-layout-col App-table-th",
+                          "span": 10,
+                        },
+                        "ref": null,
+                        "rendered": "Title",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": Array [
+                            "Price",
+                            "(",
+                            "Yuan",
+                            ")",
+                          ],
+                          "className": "App-layout-col App-table-th",
+                          "span": 4,
+                        },
+                        "ref": null,
+                        "rendered": Array [
+                          "Price",
+                          "(",
+                          "Yuan",
+                          ")",
+                        ],
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Date",
+                          "className": "App-layout-col App-table-th",
+                          "span": 4,
+                        },
+                        "ref": null,
+                        "rendered": "Date",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "Operation",
+                          "className": "App-layout-col App-table-th",
+                          "span": 4,
+                        },
+                        "ref": null,
+                        "rendered": "Operation",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "deleteItem": [Function],
+                      "list": Array [
+                        Object {
+                          "date": "2019-01-01",
+                          "event": "去云南旅游",
+                          "icon": Array [
+                            "fas",
+                            "plane",
+                          ],
+                          "id": 1,
+                          "price": 200,
+                          "type": "expense",
+                        },
+                        Object {
+                          "date": "2019-02-06",
+                          "event": "奖金收入",
+                          "icon": Array [
+                            "fas",
+                            "hand-holding-usd",
+                          ],
+                          "id": 2,
+                          "price": 80000,
+                          "type": "income",
+                        },
+                        Object {
+                          "date": "2019-03-10",
+                          "event": "游泳卡",
+                          "icon": Array [
+                            "fas",
+                            "swimmer",
+                          ],
+                          "id": 3,
+                          "price": 5000,
+                          "type": "expense",
+                        },
+                      ],
+                      "modifyItem": [Function],
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              Object {
+                "instance": null,
+                "key": "2",
+                "nodeType": "class",
+                "props": Object {
+                  "children": "Content of Tab Pane 2",
+                  "placeholder": null,
+                  "tab": <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "chart-pie",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Chart Mode
+                  </span>,
+                },
+                "ref": null,
+                "rendered": "Content of Tab Pane 2",
+                "type": [Function],
+              },
+            ],
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <header
+            className="App-header"
+          >
+            <img
+              alt="logo"
+              className="App-logo"
+              src="logo.svg"
+            />
+            <p>
+              Welcome to React
+            </p>
+          </header>,
+          <div
+            className="App-ledger"
+          >
+            <Row
+              align="middle"
+              gutter={0}
+              justify="space-between"
+              style={
+                Object {
+                  "borderBottom": "1px solid #ccc",
+                  "height": "60px",
+                  "marginBottom": "15px",
+                }
+              }
+              type="flex"
+            >
+              <Col
+                span={4}
+              >
+                <PickerWrapper
+                  locale={Object {}}
+                  onChange={[Function]}
+                  onOk={[Function]}
+                  onOpenChange={[Function]}
+                  popupStyle={Object {}}
+                  transitionName="slide-up"
+                />
+              </Col>
+              <Col
+                className="App-title-font"
+                pull={2}
+                span={9}
+              >
+                <TotalPrice
+                  total_expense={5200}
+                  total_income={80000}
+                />
+              </Col>
+              <Col
+                span={6}
+                style={
+                  Object {
+                    "textAlign": "right",
+                  }
+                }
+              >
+                <RadioGroup
+                  buttonStyle="solid"
+                  defaultValue="en-us"
+                  disabled={false}
+                  onChange={[Function]}
+                  size="default"
+                >
+                  <RadioButton
+                    value="zh-cn"
+                  >
+                    简体中文
+                  </RadioButton>
+                  <RadioButton
+                    value="zh-tw"
+                  >
+                    繁體中文
+                  </RadioButton>
+                  <RadioButton
+                    value="en"
+                  >
+                    English
+                  </RadioButton>
+                </RadioGroup>
+              </Col>
+            </Row>
+            <Tabs
+              hideAdd={false}
+              tabPosition="top"
+              type="card"
+            >
+              <TabPane
+                placeholder={null}
+                tab={
+                  <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "book",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    List Mode
+                  </span>
+                }
+              >
+                <Row
+                  align="middle"
+                  gutter={0}
+                  justify="space-between"
+                  type="flex"
+                >
+                  <Col
+                    span={4}
+                  />
+                  <Col
+                    span={3}
+                    style={
+                      Object {
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <Button
+                      block={false}
+                      ghost={false}
+                      loading={false}
+                      onClick={[Function]}
+                      size="small"
+                      type="primary"
+                    >
+                      Table Download
+                    </Button>
+                  </Col>
+                </Row>
+                <Button
+                  block={false}
+                  className="App-add-record"
+                  ghost={false}
+                  loading={false}
+                  onClick={[Function]}
+                  type="primary"
+                >
+                  <FontAwesomeIcon
+                    border={false}
+                    className=""
+                    fixedWidth={false}
+                    flip={null}
+                    icon={
+                      Array [
+                        "fas",
+                        "plus-circle",
+                      ]
+                    }
+                    inverse={false}
+                    listItem={false}
+                    mask={null}
+                    pull={null}
+                    pulse={false}
+                    rotation={null}
+                    size={null}
+                    spin={false}
+                    style={
+                      Object {
+                        "marginRight": "8px",
+                      }
+                    }
+                    symbol={false}
+                    title=""
+                    transform="shrink--8"
+                  />
+                  Create a new accounting record
+                </Button>
+                <Row
+                  className="App-layout-row"
+                  gutter={0}
+                >
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={2}
+                  >
+                    Type
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={10}
+                  >
+                    Title
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Price
+                    (
+                    Yuan
+                    )
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Date
+                  </Col>
+                  <Col
+                    className="App-layout-col App-table-th"
+                    span={4}
+                  >
+                    Operation
+                  </Col>
+                </Row>
+                <List
+                  deleteItem={[Function]}
+                  list={
+                    Array [
+                      Object {
+                        "date": "2019-01-01",
+                        "event": "去云南旅游",
+                        "icon": Array [
+                          "fas",
+                          "plane",
+                        ],
+                        "id": 1,
+                        "price": 200,
+                        "type": "expense",
+                      },
+                      Object {
+                        "date": "2019-02-06",
+                        "event": "奖金收入",
+                        "icon": Array [
+                          "fas",
+                          "hand-holding-usd",
+                        ],
+                        "id": 2,
+                        "price": 80000,
+                        "type": "income",
+                      },
+                      Object {
+                        "date": "2019-03-10",
+                        "event": "游泳卡",
+                        "icon": Array [
+                          "fas",
+                          "swimmer",
+                        ],
+                        "id": 3,
+                        "price": 5000,
+                        "type": "expense",
+                      },
+                    ]
+                  }
+                  modifyItem={[Function]}
+                />
+              </TabPane>
+              <TabPane
+                placeholder={null}
+                tab={
+                  <span>
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "chart-pie",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      symbol={false}
+                      title=""
+                      transform={null}
+                    />
+                     
+                    Chart Mode
+                  </span>
+                }
+              >
+                Content of Tab Pane 2
+              </TabPane>
+            </Tabs>
+          </div>,
+        ],
+        "className": "App",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <img
+                alt="logo"
+                className="App-logo"
+                src="logo.svg"
+              />,
+              <p>
+                Welcome to React
+              </p>,
+            ],
+            "className": "App-header",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "alt": "logo",
+                "className": "App-logo",
+                "src": "logo.svg",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "img",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Welcome to React",
+              },
+              "ref": null,
+              "rendered": "Welcome to React",
+              "type": "p",
+            },
+          ],
+          "type": "header",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <Row
+                align="middle"
+                gutter={0}
+                justify="space-between"
+                style={
+                  Object {
+                    "borderBottom": "1px solid #ccc",
+                    "height": "60px",
+                    "marginBottom": "15px",
+                  }
+                }
+                type="flex"
+              >
+                <Col
+                  span={4}
+                >
+                  <PickerWrapper
+                    locale={Object {}}
+                    onChange={[Function]}
+                    onOk={[Function]}
+                    onOpenChange={[Function]}
+                    popupStyle={Object {}}
+                    transitionName="slide-up"
+                  />
+                </Col>
+                <Col
+                  className="App-title-font"
+                  pull={2}
+                  span={9}
+                >
+                  <TotalPrice
+                    total_expense={5200}
+                    total_income={80000}
+                  />
+                </Col>
+                <Col
+                  span={6}
+                  style={
+                    Object {
+                      "textAlign": "right",
+                    }
+                  }
+                >
+                  <RadioGroup
+                    buttonStyle="solid"
+                    defaultValue="en-us"
+                    disabled={false}
+                    onChange={[Function]}
+                    size="default"
+                  >
+                    <RadioButton
+                      value="zh-cn"
+                    >
+                      简体中文
+                    </RadioButton>
+                    <RadioButton
+                      value="zh-tw"
+                    >
+                      繁體中文
+                    </RadioButton>
+                    <RadioButton
+                      value="en"
+                    >
+                      English
+                    </RadioButton>
+                  </RadioGroup>
+                </Col>
+              </Row>,
+              <Tabs
+                hideAdd={false}
+                tabPosition="top"
+                type="card"
+              >
+                <TabPane
+                  placeholder={null}
+                  tab={
+                    <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "book",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      List Mode
+                    </span>
+                  }
+                >
+                  <Row
+                    align="middle"
+                    gutter={0}
+                    justify="space-between"
+                    type="flex"
+                  >
+                    <Col
+                      span={4}
+                    />
+                    <Col
+                      span={3}
+                      style={
+                        Object {
+                          "textAlign": "right",
+                        }
+                      }
+                    >
+                      <Button
+                        block={false}
+                        ghost={false}
+                        loading={false}
+                        onClick={[Function]}
+                        size="small"
+                        type="primary"
+                      >
+                        Table Download
+                      </Button>
+                    </Col>
+                  </Row>
+                  <Button
+                    block={false}
+                    className="App-add-record"
+                    ghost={false}
+                    loading={false}
+                    onClick={[Function]}
+                    type="primary"
+                  >
+                    <FontAwesomeIcon
+                      border={false}
+                      className=""
+                      fixedWidth={false}
+                      flip={null}
+                      icon={
+                        Array [
+                          "fas",
+                          "plus-circle",
+                        ]
+                      }
+                      inverse={false}
+                      listItem={false}
+                      mask={null}
+                      pull={null}
+                      pulse={false}
+                      rotation={null}
+                      size={null}
+                      spin={false}
+                      style={
+                        Object {
+                          "marginRight": "8px",
+                        }
+                      }
+                      symbol={false}
+                      title=""
+                      transform="shrink--8"
+                    />
+                    Create a new accounting record
+                  </Button>
+                  <Row
+                    className="App-layout-row"
+                    gutter={0}
+                  >
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={2}
+                    >
+                      Type
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={10}
+                    >
+                      Title
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Price
+                      (
+                      Yuan
+                      )
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Date
+                    </Col>
+                    <Col
+                      className="App-layout-col App-table-th"
+                      span={4}
+                    >
+                      Operation
+                    </Col>
+                  </Row>
+                  <List
+                    deleteItem={[Function]}
+                    list={
+                      Array [
+                        Object {
+                          "date": "2019-01-01",
+                          "event": "去云南旅游",
+                          "icon": Array [
+                            "fas",
+                            "plane",
+                          ],
+                          "id": 1,
+                          "price": 200,
+                          "type": "expense",
+                        },
+                        Object {
+                          "date": "2019-02-06",
+                          "event": "奖金收入",
+                          "icon": Array [
+                            "fas",
+                            "hand-holding-usd",
+                          ],
+                          "id": 2,
+                          "price": 80000,
+                          "type": "income",
+                        },
+                        Object {
+                          "date": "2019-03-10",
+                          "event": "游泳卡",
+                          "icon": Array [
+                            "fas",
+                            "swimmer",
+                          ],
+                          "id": 3,
+                          "price": 5000,
+                          "type": "expense",
+                        },
+                      ]
+                    }
+                    modifyItem={[Function]}
+                  />
+                </TabPane>
+                <TabPane
+                  placeholder={null}
+                  tab={
+                    <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "chart-pie",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Chart Mode
+                    </span>
+                  }
+                >
+                  Content of Tab Pane 2
+                </TabPane>
+              </Tabs>,
+            ],
+            "className": "App-ledger",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "align": "middle",
+                "children": Array [
+                  <Col
+                    span={4}
+                  >
+                    <PickerWrapper
+                      locale={Object {}}
+                      onChange={[Function]}
+                      onOk={[Function]}
+                      onOpenChange={[Function]}
+                      popupStyle={Object {}}
+                      transitionName="slide-up"
+                    />
+                  </Col>,
+                  <Col
+                    className="App-title-font"
+                    pull={2}
+                    span={9}
+                  >
+                    <TotalPrice
+                      total_expense={5200}
+                      total_income={80000}
+                    />
+                  </Col>,
+                  <Col
+                    span={6}
+                    style={
+                      Object {
+                        "textAlign": "right",
+                      }
+                    }
+                  >
+                    <RadioGroup
+                      buttonStyle="solid"
+                      defaultValue="en-us"
+                      disabled={false}
+                      onChange={[Function]}
+                      size="default"
+                    >
+                      <RadioButton
+                        value="zh-cn"
+                      >
+                        简体中文
+                      </RadioButton>
+                      <RadioButton
+                        value="zh-tw"
+                      >
+                        繁體中文
+                      </RadioButton>
+                      <RadioButton
+                        value="en"
+                      >
+                        English
+                      </RadioButton>
+                    </RadioGroup>
+                  </Col>,
+                ],
+                "gutter": 0,
+                "justify": "space-between",
+                "style": Object {
+                  "borderBottom": "1px solid #ccc",
+                  "height": "60px",
+                  "marginBottom": "15px",
+                },
+                "type": "flex",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <PickerWrapper
+                      locale={Object {}}
+                      onChange={[Function]}
+                      onOk={[Function]}
+                      onOpenChange={[Function]}
+                      popupStyle={Object {}}
+                      transitionName="slide-up"
+                    />,
+                    "span": 4,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "locale": Object {},
+                      "onChange": [Function],
+                      "onOk": [Function],
+                      "onOpenChange": [Function],
+                      "popupStyle": Object {},
+                      "transitionName": "slide-up",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <TotalPrice
+                      total_expense={5200}
+                      total_income={80000}
+                    />,
+                    "className": "App-title-font",
+                    "pull": 2,
+                    "span": 9,
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "function",
+                    "props": Object {
+                      "total_expense": 5200,
+                      "total_income": 80000,
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": <RadioGroup
+                      buttonStyle="solid"
+                      defaultValue="en-us"
+                      disabled={false}
+                      onChange={[Function]}
+                      size="default"
+                    >
+                      <RadioButton
+                        value="zh-cn"
+                      >
+                        简体中文
+                      </RadioButton>
+                      <RadioButton
+                        value="zh-tw"
+                      >
+                        繁體中文
+                      </RadioButton>
+                      <RadioButton
+                        value="en"
+                      >
+                        English
+                      </RadioButton>
+                    </RadioGroup>,
+                    "span": 6,
+                    "style": Object {
+                      "textAlign": "right",
+                    },
+                  },
+                  "ref": null,
+                  "rendered": Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "buttonStyle": "solid",
+                      "children": Array [
+                        <RadioButton
+                          value="zh-cn"
+                        >
+                          简体中文
+                        </RadioButton>,
+                        <RadioButton
+                          value="zh-tw"
+                        >
+                          繁體中文
+                        </RadioButton>,
+                        <RadioButton
+                          value="en"
+                        >
+                          English
+                        </RadioButton>,
+                      ],
+                      "defaultValue": "en-us",
+                      "disabled": false,
+                      "onChange": [Function],
+                      "size": "default",
+                    },
+                    "ref": null,
+                    "rendered": Array [
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "简体中文",
+                          "value": "zh-cn",
+                        },
+                        "ref": null,
+                        "rendered": "简体中文",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "繁體中文",
+                          "value": "zh-tw",
+                        },
+                        "ref": null,
+                        "rendered": "繁體中文",
+                        "type": [Function],
+                      },
+                      Object {
+                        "instance": null,
+                        "key": undefined,
+                        "nodeType": "class",
+                        "props": Object {
+                          "children": "English",
+                          "value": "en",
+                        },
+                        "ref": null,
+                        "rendered": "English",
+                        "type": [Function],
+                      },
+                    ],
+                    "type": [Function],
+                  },
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": Array [
+                  <TabPane
+                    placeholder={null}
+                    tab={
+                      <span>
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Array [
+                              "fas",
+                              "book",
+                            ]
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        List Mode
+                      </span>
+                    }
+                  >
+                    <Row
+                      align="middle"
+                      gutter={0}
+                      justify="space-between"
+                      type="flex"
+                    >
+                      <Col
+                        span={4}
+                      />
+                      <Col
+                        span={3}
+                        style={
+                          Object {
+                            "textAlign": "right",
+                          }
+                        }
+                      >
+                        <Button
+                          block={false}
+                          ghost={false}
+                          loading={false}
+                          onClick={[Function]}
+                          size="small"
+                          type="primary"
+                        >
+                          Table Download
+                        </Button>
+                      </Col>
+                    </Row>
+                    <Button
+                      block={false}
+                      className="App-add-record"
+                      ghost={false}
+                      loading={false}
+                      onClick={[Function]}
+                      type="primary"
+                    >
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "plus-circle",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        style={
+                          Object {
+                            "marginRight": "8px",
+                          }
+                        }
+                        symbol={false}
+                        title=""
+                        transform="shrink--8"
+                      />
+                      Create a new accounting record
+                    </Button>
+                    <Row
+                      className="App-layout-row"
+                      gutter={0}
+                    >
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={2}
+                      >
+                        Type
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={10}
+                      >
+                        Title
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Price
+                        (
+                        Yuan
+                        )
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Date
+                      </Col>
+                      <Col
+                        className="App-layout-col App-table-th"
+                        span={4}
+                      >
+                        Operation
+                      </Col>
+                    </Row>
+                    <List
+                      deleteItem={[Function]}
+                      list={
+                        Array [
+                          Object {
+                            "date": "2019-01-01",
+                            "event": "去云南旅游",
+                            "icon": Array [
+                              "fas",
+                              "plane",
+                            ],
+                            "id": 1,
+                            "price": 200,
+                            "type": "expense",
+                          },
+                          Object {
+                            "date": "2019-02-06",
+                            "event": "奖金收入",
+                            "icon": Array [
+                              "fas",
+                              "hand-holding-usd",
+                            ],
+                            "id": 2,
+                            "price": 80000,
+                            "type": "income",
+                          },
+                          Object {
+                            "date": "2019-03-10",
+                            "event": "游泳卡",
+                            "icon": Array [
+                              "fas",
+                              "swimmer",
+                            ],
+                            "id": 3,
+                            "price": 5000,
+                            "type": "expense",
+                          },
+                        ]
+                      }
+                      modifyItem={[Function]}
+                    />
+                  </TabPane>,
+                  <TabPane
+                    placeholder={null}
+                    tab={
+                      <span>
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Array [
+                              "fas",
+                              "chart-pie",
+                            ]
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          symbol={false}
+                          title=""
+                          transform={null}
+                        />
+                         
+                        Chart Mode
+                      </span>
+                    }
+                  >
+                    Content of Tab Pane 2
+                  </TabPane>,
+                ],
+                "hideAdd": false,
+                "tabPosition": "top",
+                "type": "card",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": "1",
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": Array [
+                      <Row
+                        align="middle"
+                        gutter={0}
+                        justify="space-between"
+                        type="flex"
+                      >
+                        <Col
+                          span={4}
+                        />
+                        <Col
+                          span={3}
+                          style={
+                            Object {
+                              "textAlign": "right",
+                            }
+                          }
+                        >
+                          <Button
+                            block={false}
+                            ghost={false}
+                            loading={false}
+                            onClick={[Function]}
+                            size="small"
+                            type="primary"
+                          >
+                            Table Download
+                          </Button>
+                        </Col>
+                      </Row>,
+                      <Button
+                        block={false}
+                        className="App-add-record"
+                        ghost={false}
+                        loading={false}
+                        onClick={[Function]}
+                        type="primary"
+                      >
+                        <FontAwesomeIcon
+                          border={false}
+                          className=""
+                          fixedWidth={false}
+                          flip={null}
+                          icon={
+                            Array [
+                              "fas",
+                              "plus-circle",
+                            ]
+                          }
+                          inverse={false}
+                          listItem={false}
+                          mask={null}
+                          pull={null}
+                          pulse={false}
+                          rotation={null}
+                          size={null}
+                          spin={false}
+                          style={
+                            Object {
+                              "marginRight": "8px",
+                            }
+                          }
+                          symbol={false}
+                          title=""
+                          transform="shrink--8"
+                        />
+                        Create a new accounting record
+                      </Button>,
+                      <Row
+                        className="App-layout-row"
+                        gutter={0}
+                      >
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={2}
+                        >
+                          Type
+                        </Col>
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={10}
+                        >
+                          Title
+                        </Col>
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Price
+                          (
+                          Yuan
+                          )
+                        </Col>
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Date
+                        </Col>
+                        <Col
+                          className="App-layout-col App-table-th"
+                          span={4}
+                        >
+                          Operation
+                        </Col>
+                      </Row>,
+                      <List
+                        deleteItem={[Function]}
+                        list={
+                          Array [
+                            Object {
+                              "date": "2019-01-01",
+                              "event": "去云南旅游",
+                              "icon": Array [
+                                "fas",
+                                "plane",
+                              ],
+                              "id": 1,
+                              "price": 200,
+                              "type": "expense",
+                            },
+                            Object {
+                              "date": "2019-02-06",
+                              "event": "奖金收入",
+                              "icon": Array [
+                                "fas",
+                                "hand-holding-usd",
+                              ],
+                              "id": 2,
+                              "price": 80000,
+                              "type": "income",
+                            },
+                            Object {
+                              "date": "2019-03-10",
+                              "event": "游泳卡",
+                              "icon": Array [
+                                "fas",
+                                "swimmer",
+                              ],
+                              "id": 3,
+                              "price": 5000,
+                              "type": "expense",
+                            },
+                          ]
+                        }
+                        modifyItem={[Function]}
+                      />,
+                    ],
+                    "placeholder": null,
+                    "tab": <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "book",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      List Mode
+                    </span>,
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "align": "middle",
+                        "children": Array [
+                          <Col
+                            span={4}
+                          />,
+                          <Col
+                            span={3}
+                            style={
+                              Object {
+                                "textAlign": "right",
+                              }
+                            }
+                          >
+                            <Button
+                              block={false}
+                              ghost={false}
+                              loading={false}
+                              onClick={[Function]}
+                              size="small"
+                              type="primary"
+                            >
+                              Table Download
+                            </Button>
+                          </Col>,
+                        ],
+                        "gutter": 0,
+                        "justify": "space-between",
+                        "type": "flex",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "span": 4,
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": <Button
+                              block={false}
+                              ghost={false}
+                              loading={false}
+                              onClick={[Function]}
+                              size="small"
+                              type="primary"
+                            >
+                              Table Download
+                            </Button>,
+                            "span": 3,
+                            "style": Object {
+                              "textAlign": "right",
+                            },
+                          },
+                          "ref": null,
+                          "rendered": Object {
+                            "instance": null,
+                            "key": undefined,
+                            "nodeType": "class",
+                            "props": Object {
+                              "block": false,
+                              "children": "Table Download",
+                              "ghost": false,
+                              "loading": false,
+                              "onClick": [Function],
+                              "size": "small",
+                              "type": "primary",
+                            },
+                            "ref": null,
+                            "rendered": "Table Download",
+                            "type": [Function],
+                          },
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "block": false,
+                        "children": Array [
+                          <FontAwesomeIcon
+                            border={false}
+                            className=""
+                            fixedWidth={false}
+                            flip={null}
+                            icon={
+                              Array [
+                                "fas",
+                                "plus-circle",
+                              ]
+                            }
+                            inverse={false}
+                            listItem={false}
+                            mask={null}
+                            pull={null}
+                            pulse={false}
+                            rotation={null}
+                            size={null}
+                            spin={false}
+                            style={
+                              Object {
+                                "marginRight": "8px",
+                              }
+                            }
+                            symbol={false}
+                            title=""
+                            transform="shrink--8"
+                          />,
+                          "Create a new accounting record",
+                        ],
+                        "className": "App-add-record",
+                        "ghost": false,
+                        "loading": false,
+                        "onClick": [Function],
+                        "type": "primary",
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "function",
+                          "props": Object {
+                            "border": false,
+                            "className": "",
+                            "fixedWidth": false,
+                            "flip": null,
+                            "icon": Array [
+                              "fas",
+                              "plus-circle",
+                            ],
+                            "inverse": false,
+                            "listItem": false,
+                            "mask": null,
+                            "pull": null,
+                            "pulse": false,
+                            "rotation": null,
+                            "size": null,
+                            "spin": false,
+                            "style": Object {
+                              "marginRight": "8px",
+                            },
+                            "symbol": false,
+                            "title": "",
+                            "transform": "shrink--8",
+                          },
+                          "ref": null,
+                          "rendered": null,
+                          "type": [Function],
+                        },
+                        "Create a new accounting record",
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "children": Array [
+                          <Col
+                            className="App-layout-col App-table-th"
+                            span={2}
+                          >
+                            Type
+                          </Col>,
+                          <Col
+                            className="App-layout-col App-table-th"
+                            span={10}
+                          >
+                            Title
+                          </Col>,
+                          <Col
+                            className="App-layout-col App-table-th"
+                            span={4}
+                          >
+                            Price
+                            (
+                            Yuan
+                            )
+                          </Col>,
+                          <Col
+                            className="App-layout-col App-table-th"
+                            span={4}
+                          >
+                            Date
+                          </Col>,
+                          <Col
+                            className="App-layout-col App-table-th"
+                            span={4}
+                          >
+                            Operation
+                          </Col>,
+                        ],
+                        "className": "App-layout-row",
+                        "gutter": 0,
+                      },
+                      "ref": null,
+                      "rendered": Array [
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Type",
+                            "className": "App-layout-col App-table-th",
+                            "span": 2,
+                          },
+                          "ref": null,
+                          "rendered": "Type",
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Title",
+                            "className": "App-layout-col App-table-th",
+                            "span": 10,
+                          },
+                          "ref": null,
+                          "rendered": "Title",
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": Array [
+                              "Price",
+                              "(",
+                              "Yuan",
+                              ")",
+                            ],
+                            "className": "App-layout-col App-table-th",
+                            "span": 4,
+                          },
+                          "ref": null,
+                          "rendered": Array [
+                            "Price",
+                            "(",
+                            "Yuan",
+                            ")",
+                          ],
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Date",
+                            "className": "App-layout-col App-table-th",
+                            "span": 4,
+                          },
+                          "ref": null,
+                          "rendered": "Date",
+                          "type": [Function],
+                        },
+                        Object {
+                          "instance": null,
+                          "key": undefined,
+                          "nodeType": "class",
+                          "props": Object {
+                            "children": "Operation",
+                            "className": "App-layout-col App-table-th",
+                            "span": 4,
+                          },
+                          "ref": null,
+                          "rendered": "Operation",
+                          "type": [Function],
+                        },
+                      ],
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "function",
+                      "props": Object {
+                        "deleteItem": [Function],
+                        "list": Array [
+                          Object {
+                            "date": "2019-01-01",
+                            "event": "去云南旅游",
+                            "icon": Array [
+                              "fas",
+                              "plane",
+                            ],
+                            "id": 1,
+                            "price": 200,
+                            "type": "expense",
+                          },
+                          Object {
+                            "date": "2019-02-06",
+                            "event": "奖金收入",
+                            "icon": Array [
+                              "fas",
+                              "hand-holding-usd",
+                            ],
+                            "id": 2,
+                            "price": 80000,
+                            "type": "income",
+                          },
+                          Object {
+                            "date": "2019-03-10",
+                            "event": "游泳卡",
+                            "icon": Array [
+                              "fas",
+                              "swimmer",
+                            ],
+                            "id": 3,
+                            "price": 5000,
+                            "type": "expense",
+                          },
+                        ],
+                        "modifyItem": [Function],
+                      },
+                      "ref": null,
+                      "rendered": null,
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                Object {
+                  "instance": null,
+                  "key": "2",
+                  "nodeType": "class",
+                  "props": Object {
+                    "children": "Content of Tab Pane 2",
+                    "placeholder": null,
+                    "tab": <span>
+                      <FontAwesomeIcon
+                        border={false}
+                        className=""
+                        fixedWidth={false}
+                        flip={null}
+                        icon={
+                          Array [
+                            "fas",
+                            "chart-pie",
+                          ]
+                        }
+                        inverse={false}
+                        listItem={false}
+                        mask={null}
+                        pull={null}
+                        pulse={false}
+                        rotation={null}
+                        size={null}
+                        spin={false}
+                        symbol={false}
+                        title=""
+                        transform={null}
+                      />
+                       
+                      Chart Mode
+                    </span>,
+                  },
+                  "ref": null,
+                  "rendered": "Content of Tab Pane 2",
+                  "type": [Function],
+                },
+              ],
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+        "legacyContextMode": "parent",
+        "lifecycles": Object {
+          "componentDidUpdate": Object {
+            "onSetState": true,
+          },
+          "getChildContext": Object {
+            "calledByRenderer": false,
+          },
+          "getDerivedStateFromProps": true,
+          "getSnapshotBeforeUpdate": true,
+          "setState": Object {
+            "skipsComponentDidUpdateOnNullish": true,
+          },
+        },
+      },
+    },
+  },
+}
+`;
