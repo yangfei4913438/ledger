@@ -18,7 +18,7 @@ class App extends Component {
           <Route path={"/"} exact component={Home} />
           {/* 创建页面 */}
           <Route path={"/create"} exact component={Create} />
-          {/* 编辑页面和创建页面公用一个组件 */}
+          {/* 编辑页面, 和创建页面公用一个组件 */}
           <Route path={"/edit/:id"} exact component={Create} />
         </Fragment>
       </Router>
