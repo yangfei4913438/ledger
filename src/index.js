@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
+import './reset.css'
 import 'antd/dist/antd.css';
 import { LocaleProvider } from 'antd';
 import { antdLang } from './lang'

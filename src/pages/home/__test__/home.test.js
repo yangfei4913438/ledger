@@ -2,8 +2,8 @@ import React from 'react'
 import { shallow } from 'enzyme';
 import Home from '../'
 
-import List from '../../list'
-import TotalPrice from '../../TotalPrice'
+import List from '../components/index'
+import TotalPrice from '../components/index'
 
 let wrapper;
 describe('测试home组件', () => {
