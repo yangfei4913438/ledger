@@ -125,7 +125,7 @@ const mapDispatchToProps = (dispatch) => {
     },
     // 下载 Excel 表格
     downloadExcel (list) {
-      if (list && typeof list === typeof [1, 2]) {
+      if (list && typeof list === typeof [1, 2] && list.length > 0) {
         // 支出项过滤
         const expenseList = list.filter(item => {
           return item.type === 'expense'
