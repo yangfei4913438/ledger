@@ -2,23 +2,7 @@ import * as types from './actionTypes'
 // import axios from 'axios'
 
 // 创建新列，模拟操作
-export const createNewRecord = (arr) => {
-  let max = 0;
-  arr.forEach(row => {
-    if (row.id > max) {
-      max = row.id
-    }
-  });
-  max += 1;
-  const item = {
-    id: max,
-    event: '游泳卡',
-    price: 5000,
-    date: '2019-01-10',
-    type: 'expense',
-    icon: ['fas','swimmer']
-  };
-  const list = [item, ...arr];
+export const createNewRecord = (list) => {
   return {
     type: types.createNewRecord,
     list,

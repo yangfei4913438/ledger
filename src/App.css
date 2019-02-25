@@ -48,21 +48,9 @@
   line-height: 45px;
 }
 
-.App-ledger-create {
-  position: relative;
-  width: 80%;
-  height: 650px;
-  margin: 50px auto;
-  background: #ffffff;
-  box-shadow: 0 0 10px 3px rgba(0,0,0,.35);
-  box-sizing: border-box;
-  padding: 20px;
-  overflow-y: scroll;
-  border-radius: 3px;
-}
 .login-form {
   margin-top: 30px !important;
-  max-width: 600px;
+  width: 100%;
 }
 
 .App-ledger {

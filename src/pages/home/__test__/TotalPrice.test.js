@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import TotalPrice from '../index'
+import TotalPrice from '../components/totalPrice'
 
 const props = {
   total_income: 1000,

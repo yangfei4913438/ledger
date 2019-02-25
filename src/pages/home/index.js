@@ -1,5 +1,4 @@
-import React, { PureComponent } from 'react';
-import logo from '../../logo.svg';
+import React, { PureComponent, Fragment } from 'react';
 import { Row, Col, Button, Tabs, DatePicker, Radio } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { jsonLang } from '../../lang'
@@ -9,6 +8,8 @@ import List from './components/list'
 import TotalPrice from './components/totalPrice'
 import { connect } from 'react-redux'
 import { createActions } from './store'
+import withWrapper from '../withWrapper'
+import { withRouter } from 'react-router-dom'
 
 
 class Home extends PureComponent {
@@ -16,65 +17,65 @@ class Home extends PureComponent {
     // 初始化统计数据
     this.props.getTotal(this.props.list);
   }
+
+  // 创建对象
+  createItem = () => {
+    this.props.history.push('/create')
+  };
+
   render() {
     // 数据映射
     const { defaultLang, list } = this.props;
     // 方法映射
-    const { changeLang, downloadExcel, selectDate, createItem } = this.props;
+    const { changeLang, downloadExcel, selectDate } = this.props;
     // antd 标签页组件
     const TabPane = Tabs.TabPane;
     // antd 月份选择组件
     const { MonthPicker } = DatePicker;
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>Welcome to React</p>
-        </header>
-        <div className="App-ledger">
-          <Row style={{height: '60px', borderBottom: '1px solid #ccc', marginBottom: '15px'}}
-               type="flex" justify="space-between" align="middle">
-            <Col span={4}>
-              <MonthPicker onChange={selectDate}/>
-            </Col>
-            <Col span={9} pull={2} className={'App-title-font'}>
-              <TotalPrice />
-            </Col>
-            <Col span={6} style={{textAlign: 'right'}}>
-              <Radio.Group defaultValue={defaultLang} buttonStyle="solid" size={"default"} onChange={changeLang}>
-                <Radio.Button value="zh-cn">简体中文</Radio.Button>
-                <Radio.Button value="zh-tw">繁體中文</Radio.Button>
-                <Radio.Button value="en">English</Radio.Button>
-              </Radio.Group>
-            </Col>
-          </Row>
-          <Tabs type="card">
-            <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="1">
-              <Row type="flex" justify="space-between" align="middle">
-                <Col span={4}/>
-                <Col span={3} style={{textAlign: 'right'}}>
-                  <Button type="primary" size={"small"} onClick={() => downloadExcel(list)}>{jsonLang.btn.tableDownload}</Button>
-                </Col>
-              </Row>
-              <Button type="primary" className={'App-add-record'} onClick={() => createItem(list)}>
-                <FontAwesomeIcon icon={['fas','plus-circle']} style={{marginRight: '8px'}} transform="shrink--8"/>
-                {jsonLang.btn.add_record}
-              </Button>
-              <Row className="App-layout-row">
-                <Col span={2} className="App-layout-col App-table-th">{jsonLang.label.type}</Col>
-                <Col span={10} className="App-layout-col App-table-th">{jsonLang.label.title}</Col>
-                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.price}({jsonLang.label.yuan})</Col>
-                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.date}</Col>
-                <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.operation}</Col>
-              </Row>
-              <List />
-            </TabPane>
-            <TabPane tab={<span><FontAwesomeIcon icon={['fas','chart-pie']}/> {jsonLang.btn.chartMode}</span>} key="2">
-              Content of Tab Pane 2
-            </TabPane>
-          </Tabs>
-        </div>
-      </div>
+      <Fragment>
+        <Row style={{height: '60px', borderBottom: '1px solid #ccc', marginBottom: '15px'}}
+             type="flex" justify="space-between" align="middle">
+          <Col span={4}>
+            <MonthPicker onChange={selectDate}/>
+          </Col>
+          <Col span={9} pull={2} className={'App-title-font'}>
+            <TotalPrice />
+          </Col>
+          <Col span={6} style={{textAlign: 'right'}}>
+            <Radio.Group defaultValue={defaultLang} buttonStyle="solid" size={"default"} onChange={changeLang}>
+              <Radio.Button value="zh-cn">简体中文</Radio.Button>
+              <Radio.Button value="zh-tw">繁體中文</Radio.Button>
+              <Radio.Button value="en">English</Radio.Button>
+            </Radio.Group>
+          </Col>
+        </Row>
+        <Tabs type="card">
+          <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="1">
+            <Row type="flex" justify="space-between" align="middle">
+              <Col span={4}/>
+              <Col span={3} style={{textAlign: 'right'}}>
+                <Button type="primary" size={"small"} onClick={() => downloadExcel(list)}>{jsonLang.btn.tableDownload}</Button>
+              </Col>
+            </Row>
+            <Button type="primary" className={'App-add-record'} onClick={() => this.createItem(list)}>
+              <FontAwesomeIcon icon={['fas','plus-circle']} style={{marginRight: '8px'}} transform="shrink--8"/>
+              {jsonLang.btn.add_record}
+            </Button>
+            <Row className="App-layout-row">
+              <Col span={2} className="App-layout-col App-table-th">{jsonLang.label.type}</Col>
+              <Col span={10} className="App-layout-col App-table-th">{jsonLang.label.title}</Col>
+              <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.price}({jsonLang.label.yuan})</Col>
+              <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.date}</Col>
+              <Col span={4} className="App-layout-col App-table-th">{jsonLang.label.operation}</Col>
+            </Row>
+            <List />
+          </TabPane>
+          <TabPane tab={<span><FontAwesomeIcon icon={['fas','chart-pie']}/> {jsonLang.btn.chartMode}</span>} key="2">
+            Content of Tab Pane 2
+          </TabPane>
+        </Tabs>
+      </Fragment>
     );
   }
 }
@@ -95,10 +96,6 @@ const mapStatesToProps = (state) => {
 // 映射dispatch
 const mapDispatchToProps = (dispatch) => {
   return {
-    // 创建对象
-    createItem (arr) {
-      dispatch(createActions.createNewRecord(arr));
-    },
     // 获取汇总数据
     getTotal (list) {
       dispatch(createActions.modifyTotalData(list));
@@ -163,4 +160,4 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
-export default connect(mapStatesToProps,mapDispatchToProps)(Home);
+export default connect(mapStatesToProps,mapDispatchToProps)(withRouter(withWrapper(Home)));
