@@ -43,52 +43,48 @@ class PriceForm extends PureComponent {
 
       // 判断是否选中了图标
       let icon = null;
+      let cid = -1;
       if (this.props.activeKey === 'income') {
-        if (this.props.income.id === -1) {
+        if (this.props.income_cid === -1) {
           this.setState({
             alertErrMessage: '请选择一个收入类型!'
           });
           return;
         } else {
-          icon = this.props.categorys.filter(o => o.id === this.props.income.id)[0].icon
+          icon = this.props.categories.filter(o => o.id === this.props.income_cid)[0].icon;
+          cid = this.props.income_cid;
         }
       } else {
-        if (this.props.expense.id === -1) {
+        if (this.props.expense_cid === -1) {
           this.setState({
             alertErrMessage: '请选择一个支出类型!'
           });
           return;
         } else {
-          icon = this.props.categorys.filter(o => o.id === this.props.expense.id)[0].icon
+          icon = this.props.categories.filter(o => o.id === this.props.expense_cid)[0].icon;
+          cid = this.props.expense_cid;
         }
       }
 
-      // 计算最大的ID，因为有删减什么的，所以长度不能用于计算下一条记录的ID
-      let list = this.props.list;
-      let max = 0;
-      list.forEach(row => {
-        if (row.id > max) {
-          max = row.id
-        }
-      });
-      max += 1;
-
-      let form = {
-        id: max,
+      let item = {
         event: values.title,
         price: values.price,
         type: this.props.activeKey,
+        cid,
         icon,
         date: values.date.format('YYYY-MM-DD') // 时间类组件的 value 类型为 moment 对象，所以在提交服务器前需要预处理。
       };
 
-      list.push(form);
+      if (this.props.isEdit) {
+        item['id'] = this.props.current_edit.id;
+        this.props.modifyRecord(item)
+      } else {
+        console.log('Received values of form: ', item);
+        this.props.addItem(item);
+      }
 
-      console.log('Received values of form: ', {list});
-
-      this.props.addItem(list);
-
-      this.props.history.push('/');
+      // 不管是编辑还是新增，执行完成都要返回列表界面。
+      this.props.modifyShowCreate(false);
     });
   };
 
@@ -99,13 +95,12 @@ class PriceForm extends PureComponent {
 
   // 返回首页
   handleCancel = () => {
-    this.props.history.push('/');
+    this.props.modifyShowCreate(false);
   };
 
   render() {
     const { getFieldDecorator } = this.props.form;
-    const { tid, list } = this.props;
-    const tab = list.filter(o => o.id === parseInt(tid))[0];
+    const { isEdit, current_edit } = this.props;
     return (
       <Fragment>
         {
@@ -124,10 +119,10 @@ class PriceForm extends PureComponent {
           >
             {/* 第一个参数是捕获的字段名称 */}
             {getFieldDecorator('title', {
-              initialValue: tid ? tab.event : null,
+              initialValue: isEdit && current_edit ? current_edit.event : null,
               rules: [
                 { required: true, message: 'Please input your title!' },
-                { min: 2, message: '标题的最小长度为2个字符!' }
+                { min: 3, message: '标题的最小长度为3个字符!' }
               ],
             })(
               <Input placeholder="请输入标题" maxLength={8} id="title"/>
@@ -139,10 +134,12 @@ class PriceForm extends PureComponent {
             key={'price'}
           >
             {getFieldDecorator('price', {
-              initialValue: tid ? tab.price : null,
-              rules: [{ required: true, message: 'Please input your Money!' }],
+              initialValue: isEdit && current_edit ? current_edit.price : null,
+              rules: [
+                { required: true, message: 'Please input your Money!' }
+              ],
             })(
-              <InputNumber style={{ width: '100%' }} min={0} max={999999} placeholder="请输入金额" id="price"/>
+              <InputNumber style={{ width: '100%' }} min={0} max={100000000} placeholder="请输入金额" id="price"/>
             )}
           </Form.Item>
           <Form.Item
@@ -151,7 +148,7 @@ class PriceForm extends PureComponent {
             key={'date'}
           >
             {getFieldDecorator('date', {
-              initialValue: tid ? moment(tab.date, "YYYY-MM-DD")  : null,
+              initialValue: isEdit && current_edit ? moment(current_edit.date, "YYYY-MM-DD")  : null,
               rules: [{ required: true, message: 'Please select date!' }],
             })(
               <DatePicker style={{ width: '100%' }} placeholder="请选择日期"/>
@@ -177,19 +174,29 @@ class PriceForm extends PureComponent {
 // 映射数据
 const mapStatesToProps = (state) => {
   return {
-    income: state.getIn(['create', 'income']).toJS(),
-    expense: state.getIn(['create', 'expense']).toJS(),
-    activeKey: state.getIn(['create', 'activeKey']),
-    categorys: state.getIn(['create', 'categorys']).toJS(),
-    list: state.getIn(['home', 'list']).toJS()
+    income_cid: state.getIn(['home', 'income_cid']),
+    expense_cid: state.getIn(['home', 'expense_cid']),
+    activeKey: state.getIn(['home', 'activeKey']),
+    isEdit: state.getIn(['home', 'isEdit']),
+    list: state.getIn(['home', 'list']) ? state.getIn(['home', 'list']).toJS() : null,
+    categories: state.getIn(['home', 'categories']) ? state.getIn(['home', 'categories']).toJS() : null,
+    current_edit: state.getIn(['home', 'current_edit']) ? state.getIn(['home', 'current_edit']).toJS() : null
   }
 };
 
 // 映射dispatch
 const mapDispatchToProps = (dispatch) => {
   return {
-    addItem(list) {
-      dispatch(createActions.createNewRecord(list))
+    addItem(item) {
+      dispatch(createActions.createNewRecord(item));
+    },
+    // 修改是否显示创建组件
+    modifyShowCreate (res) {
+      dispatch(createActions.modifyShowCreate(res));
+    },
+    // 提交修改记录
+    modifyRecord (item) {
+      dispatch(createActions.modifyRecord(item));
     }
   }
 };

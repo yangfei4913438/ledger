@@ -4,7 +4,6 @@ import { Provider } from 'react-redux'
 import './App.css';
 import store from './store'
 import Home from './pages/home'
-import Create from './pages/create'
 
 // PureComponent 表示自动使用shouldComponentUpdate生命周期函数，如果没有数据被更新，那么当前组件不会更新.
 // 使用这个组件，那么数据必须全部使用 immutable 对象，否则会有很多的坑！！！
@@ -25,10 +24,10 @@ class App extends PureComponent {
              component: 路径对应的组件
             */}
             <Route path={"/"} exact component={Home} />
-            {/* 创建页面 */}
-            <Route path={"/create"} exact component={Create} />
-            {/* 编辑页面, 和创建页面公用一个组件 */}
-            <Route path={"/edit/:id"} exact component={Create} />
+            {/*/!* 创建页面 *!/*/}
+            {/*<Route path={"/create"} exact component={Create} />*/}
+            {/*/!* 编辑页面, 和创建页面公用一个组件 *!/*/}
+            {/*<Route path={"/edit/:id"} exact component={Create} />*/}
           </Fragment>
         </BrowserRouter>
       </Provider>

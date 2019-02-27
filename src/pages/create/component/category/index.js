@@ -4,17 +4,22 @@ import { Array } from 'yf-jstools'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {jsonLang} from '../../../../lang/index';
 import { connect } from 'react-redux'
-import { createActions } from '../../store'
+import { createActions } from '../../../home/store'
 
 class Category extends PureComponent {
+  componentDidMount () {
+    const { current_edit, isEdit, onSelectTab } = this.props;
+    // 如果是编辑状态，就把当前的标签类型，修改成编辑数据的标签类型
+    isEdit && onSelectTab(current_edit.type);
+  }
+
   render () {
     const TabPane = Tabs.TabPane;
-    const { income, expense, activeKey, categorys, onSelectCategory, onSelectTab, arr, tid } = this.props;
-    const list = Array.split_array(categorys, 4);
-    const tab = arr.filter(o => o.id === parseInt(tid))[0];
+    const { income_cid, expense_cid, activeKey, categories, onSelectCategory, onSelectTab } = this.props;
+    const list = Array.split_array(categories, 4);
     return (
       <Fragment>
-        <Tabs type="card" className={'App-tabs'}  defaultActiveKey={ tid ? tab.type : activeKey} onChange={onSelectTab}>
+        <Tabs type="card" className={'App-tabs'}  activeKey={ activeKey } onChange={onSelectTab}>
           <TabPane tab={<span><FontAwesomeIcon icon={['far','calendar-plus']}/> {jsonLang.label.income}</span>} key="income">
             {
               list.map((item, idx) => {
@@ -22,7 +27,7 @@ class Category extends PureComponent {
                   <Row className={'icon-row'} type="flex" justify="space-around" align="middle" key={idx}>
                     {
                       item.map((row, idx2) =>{
-                        const iconClass = row.id === income.id ? 'category-icon active' : 'category-icon';
+                        const iconClass = row.id === income_cid ? 'category-icon active' : 'category-icon';
                         return (
                           <Col span={3} className={iconClass} key={idx2} onClick={() => onSelectCategory('income', row.id)}>
                             <FontAwesomeIcon icon={row.icon}/> {row.name}
@@ -42,7 +47,7 @@ class Category extends PureComponent {
                   <Row className={'icon-row'} type="flex" justify="space-around" align="middle" key={idx}>
                     {
                       item.map((row, idx2) =>{
-                        const iconClass = row.id === expense.id ? 'category-icon active' : 'category-icon';
+                        const iconClass = row.id === expense_cid ? 'category-icon active' : 'category-icon';
                         return (
                           <Col span={3} className={iconClass} key={idx2} onClick={() => onSelectCategory('expense', row.id)}>
                             <FontAwesomeIcon icon={row.icon}/> {row.name}
@@ -65,11 +70,12 @@ class Category extends PureComponent {
 // 映射数据
 const mapStatesToProps = (state) => {
   return {
-    income: state.getIn(['create', 'income']).toJS(),
-    expense: state.getIn(['create', 'expense']).toJS(),
-    activeKey: state.getIn(['create', 'activeKey']),
-    categorys: state.getIn(['create', 'categorys']).toJS(),
-    arr: state.getIn(['home', 'list']).toJS()
+    income_cid: state.getIn(['home', 'income_cid']),
+    expense_cid: state.getIn(['home', 'expense_cid']),
+    activeKey: state.getIn(['home', 'activeKey']),
+    isEdit: state.getIn(['home', 'isEdit']),
+    categories: state.getIn(['home', 'categories']) ? state.getIn(['home', 'categories']).toJS() : null,
+    current_edit: state.getIn(['home', 'current_edit']) ? state.getIn(['home', 'current_edit']).toJS() : null
   }
 };
 

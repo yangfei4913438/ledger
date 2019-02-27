@@ -16,24 +16,29 @@ export default (WrappedComponent) => {
           return response;
         },
         (error) => {
-          if (error.response.status === 502) {
-            message.error(jsonLang.http_err.err502);
-          } else {
-            switch (error.response.data && error.response.data.code) {
-              // 服务内部错误
-              case 100:
-                message.error(jsonLang.http_err.err100);
-                break;
-              // 鉴权失败
-              case 101:
-                // 身份异常，清理本机数据，跳转登陆页面
-                LocalStorage.clearNMS();
-                message.error(jsonLang.http_err.err101, 3, window.location.replace('/'));
-                break;
-              // 其他未定义错误
-              default:
-                message.error(jsonLang.http_err.err182);
-            }
+          switch (error.response.status) {
+            case 502:
+              message.error(jsonLang.http_err.err502, 5);
+              break;
+            case 404:
+              message.error(jsonLang.http_err.err404, 5);
+              break;
+            default:
+              switch (error.response.data && error.response.data.code) {
+                // 服务内部错误
+                case 100:
+                  message.error(jsonLang.http_err.err100, 5);
+                  break;
+                // 鉴权失败
+                case 101:
+                  // 身份异常，清理本机数据，跳转登陆页面
+                  LocalStorage.clearNMS();
+                  message.error(jsonLang.http_err.err101, 5, window.location.replace('/'));
+                  break;
+                // 其他未定义错误
+                default:
+                  message.error(jsonLang.http_err.err182, 5);
+              }
           }
           return Promise.reject(error);
         }

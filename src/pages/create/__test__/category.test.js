@@ -1,6 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Category from '../component/category'
+import Category from '../component/category/index'
 
 
 const categorys = [

@@ -1,36 +1,99 @@
 import * as types from './actionTypes'
-// import axios from 'axios'
+import axios from 'axios'
 
-// 创建新列，模拟操作
-export const createNewRecord = (list) => {
+// 选择日期, 查询数据
+export const chooseDate = (val) => {
+  // 异步必须通过这种方式来处理。
+  return (dispatch) => {
+    // 如果为空，就是全部查，有值就是模糊查询
+    let url = val ? '/api/v1/list?date_like=' + val : '/api/v1/list';
+    axios.get(url)
+      .then(res => {
+        // 更新查询关键字
+        dispatch(chooseDateSet(res.data, val))
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  };
+};
+
+// 更新查询关键字
+const chooseDateSet = (list, val) => {
   return {
-    type: types.createNewRecord,
+    type: types.chooseDate,
     list,
+    choose_date: val,
     ...totalData(list)
   }
+};
+
+// 获取初始列表记录
+export const initData = () => {
+  // redux-thunk 支持这里的返回值为函数类型
+  // 这个函数自动接收dispatch方法作为参数
+  return (dispatch) => {
+    const arr = [axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')];
+    Promise.all(arr)
+      .then(arr => {
+        const [list, categories] = arr;
+        dispatch(setInitData(list.data, categories.data))
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  }
+};
+
+// 更新本地的list数据
+const setInitData = (list, categories) => {
+  return {
+    type: types.initData,
+    list,
+    categories,
+    ...totalData(list) // 将函数返回的对象，变成两个独立的属性（和上面的list一样）
+  }
+};
+
+// 创建新列，模拟操作
+export const createNewRecord = (item) => {
+  return (dispatch) => {
+    axios.post('/api/v1/list', item)
+      .then(() => {
+        // 添加完成数据后，获取新的数据
+        dispatch(initData())
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  };
 };
 
 // 删除记录
-export const delRecord = (arr, id) => {
-  const list = arr.filter(item => item.id !== id);
-  return {
-    type: types.delRecord,
-    list,
-    ...totalData(list)
-  }
+export const delRecord = (id) => {
+  return (dispatch) => {
+    axios.delete('/api/v1/list/'+id)
+      .then(() => {
+        // 删除完成后，获取新的数据
+        dispatch(initData())
+      })
+      .catch(err => {
+        console.log(err)
+      })
+  };
 };
 
 // 修改记录
-export const modifyRecord = (arr, id) => {
-  let list = arr.map(row => {
-    if (row.id === id) {
-      row.event = '更新后的标题';
-    }
-    return row
-  });
-  return {
-    type: types.modifyRecord,
-    list
+export const modifyRecord = (item) => {
+  return (dispatch) => {
+    axios.put('/api/v1/list/'+item.id, item)
+      .then(() => {
+        // 修改完成后，获取新的数据
+        dispatch(initData())
+      })
+      .catch(err => {
+        console.log(err)
+      })
   }
 };
 
@@ -51,25 +114,50 @@ const totalData = (arr) => {
   }
 };
 
-// 修改汇总记录
-export const modifyTotalData = (arr) => {
+// 当前编辑的对象更新
+export const currentEdit = (item) => {
   return {
-    type: types.modifyTotalData,
-    ...totalData(arr)
+    type: types.currentEdit,
+    item
   }
 };
 
-// 选择日期
-export const chooseDate = (arr, val) => {
-  // 有值的时候，过滤，没有值的时候，用全部
-  let list = val ? arr.filter(item => {
-    // 从下标0开始，截取7位字符
-    return item.date.substr(0, 7) === val
-  }) : arr;
-
+// 修改收入图标ID
+export const modifyIncomeIconID = (id) => {
   return {
-    type: types.chooseDate,
-    choose_date: val,
-    ...totalData(list)
+    type: types.modifyIncomeIconID,
+    income: id
+  }
+};
+
+// 修改支出图标ID
+export const modifyExpenseIconID = (id) => {
+  return {
+    type: types.modifyExpenseIconID,
+    expense: id
+  }
+};
+
+// 修改选中的标签页
+export const modifyChooseTab = (key) => {
+  return {
+    type: types.modifyChooseTab,
+    activeKey: key
+  }
+};
+
+// 修改是否编辑状态
+export const modifyIsEdit = (status) => {
+  return {
+    type: types.modifyIsEdit,
+    isEdit: status
+  }
+};
+
+// 修改是否显示创建组件
+export const modifyShowCreate = (status) => {
+  return {
+    type: types.modifyShowCreate,
+    showCreate: status
   }
 };

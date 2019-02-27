@@ -1,21 +1,26 @@
-import React, { Fragment } from 'react'
-import Category from './component/category'
-import PriceForm from './component/priceForm'
-import withWrapper from '../withWrapper'
+import React, { PureComponent, Fragment } from 'react'
+import Category from './component/category/index'
+import PriceForm from './component/priceForm/index'
+import { connect } from 'react-redux'
 
-
-class Create extends React.Component {
+class Create extends PureComponent {
   render() {
-    const { match, data_test } = this.props;
+    const { data_test } = this.props;
     return (
       <Fragment>
         <div>this is create page. {data_test} </div>
-        { console.log(match.params.id) }
-        <Category tid={match.params.id} />
-        <PriceForm tid={match.params.id} />
+        <Category />
+        <PriceForm />
       </Fragment>
     )
   }
 }
 
-export default withWrapper(Create);
+// 映射数据
+const mapStatesToProps = (state) => {
+  return {
+    current_edit: state.getIn(['home', 'current_edit']) ? state.getIn(['home', 'current_edit']).toJS() : null
+  }
+};
+
+export default connect(mapStatesToProps, null)(Create);
