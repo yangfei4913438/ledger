@@ -23,7 +23,7 @@
     "redux-devtools-extension": "^2.13.8",
     "redux-immutable": "^4.0.0",
     "redux-thunk": "^2.3.0",
-    "yf-jstools": "^1.0.6"
+    "yf-jstools": "^1.0.7"
   },
   "scripts": {
     "start": "concurrently \"react-scripts start\"  \"yarn mock\" ",

@@ -11940,7 +11940,7 @@ yargs@^12.0.1, yargs@^12.0.2:
     y18n "^3.2.1 || ^4.0.0"
     yargs-parser "^11.1.1"
 
-yf-jstools@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/yf-jstools/-/yf-jstools-1.0.6.tgz#3faeddb472079d17bcb896616d2cf29621b59135"
-  integrity sha512-uHtv6kqfHZlXvoTCb70/4aXoxd/6931hEdS5EmoxC4K6sNCSEfXRzFjU/0I2S03zgfyHhrEMltDYRbcmR1czkQ==
+yf-jstools@^1.0.7:
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/yf-jstools/-/yf-jstools-1.0.7.tgz#cd3f89e1e79e8abdc2c587ab3b159a5e96f2c0fd"
+  integrity sha512-YjfM6AAVb2Z6b2o5VcxdHPLdCjTayU/+4dLWiG6s9l0C9oC2DmCAI+8AqAGmLyr80UMUsFuyDp1qXru4W0EwiQ==
