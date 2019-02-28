@@ -15,7 +15,7 @@ class App extends PureComponent {
           所有的路由，都要写在 BrowserRouter 组件下面.
           使用 react-router-dom 单页路由，避免每次路由跳转，都要加载整个html页面.
         */}
-        <BrowserRouter className="App">
+        <BrowserRouter>
           {/* BrowserRouter 组件下面必须包起来，因为只能有一个DOM元素 */}
           <Fragment>
             {/*
@@ -24,10 +24,6 @@ class App extends PureComponent {
              component: 路径对应的组件
             */}
             <Route path={"/"} exact component={Home} />
-            {/*/!* 创建页面 *!/*/}
-            {/*<Route path={"/create"} exact component={Create} />*/}
-            {/*/!* 编辑页面, 和创建页面公用一个组件 *!/*/}
-            {/*<Route path={"/edit/:id"} exact component={Create} />*/}
           </Fragment>
         </BrowserRouter>
       </Provider>
