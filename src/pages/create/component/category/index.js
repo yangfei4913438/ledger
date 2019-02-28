@@ -19,7 +19,7 @@ class Category extends PureComponent {
     const list = Array.split_array(categories, 4);
     return (
       <Fragment>
-        <Tabs type="card" className={'App-tabs'}  activeKey={ activeKey } onChange={onSelectTab}>
+        <Tabs type="card" activeKey={ activeKey } onChange={onSelectTab}>
           <TabPane tab={<span><FontAwesomeIcon icon={['far','calendar-plus']}/> {jsonLang.label.income}</span>} key="income">
             {
               list.map((item, idx) => {

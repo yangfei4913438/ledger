@@ -2,6 +2,7 @@ import React, { PureComponent, Fragment } from 'react'
 import Category from './component/category/index'
 import PriceForm from './component/priceForm/index'
 import { connect } from 'react-redux'
+import './create.styl'
 
 class Create extends PureComponent {
   render() {

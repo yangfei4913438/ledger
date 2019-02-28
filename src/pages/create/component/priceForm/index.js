@@ -155,13 +155,13 @@ class PriceForm extends PureComponent {
             )}
           </Form.Item>
           <Form.Item  {...tailFormItemLayout}>
-            <Button type="primary" htmlType="submit" className="login-form-button">
+            <Button type="primary" htmlType="submit">
               Commit
             </Button>
-            <Button type="primary" className="login-form-button" style={{ marginLeft: '50px' }} onClick={this.handleReset}>
+            <Button type="primary" style={{ marginLeft: '50px' }} onClick={this.handleReset}>
               Reset
             </Button>
-            <Button type="primary" className="login-form-button" style={{ marginLeft: '50px' }} onClick={this.handleCancel}>
+            <Button type="primary" style={{ marginLeft: '50px' }} onClick={this.handleCancel}>
               Cancel
             </Button>
           </Form.Item>

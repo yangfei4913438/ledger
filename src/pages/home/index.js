@@ -11,6 +11,7 @@ import { createActions } from './store'
 import withWrapper from '../withWrapper'
 import { withRouter } from 'react-router-dom'
 import Create from '../create'
+import './home.styl'
 
 class Home extends PureComponent {
   componentDidMount () {

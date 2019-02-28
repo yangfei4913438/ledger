@@ -1,5 +1,6 @@
 import React from 'react';
 import logo from '../../logo.svg';
+import './index.styl'
 
 // 一个公共的头部高级组件，以后也可以改造成带页脚等功能的高级组件
 const withWrapper = (Component) => {
