@@ -12,6 +12,8 @@ import withWrapper from '../withWrapper'
 import { withRouter } from 'react-router-dom'
 import Create from '../create'
 import './home.styl'
+import Loader from 'react-loaders'
+import './react-loader.scss'
 
 class Home extends PureComponent {
   componentDidMount () {
@@ -56,6 +58,9 @@ class Home extends PureComponent {
                   </Radio.Group>
                 </Col>
               </Row>
+              <div className={'loader-layer'}>
+                <Loader active={true} type='ball-spin-fade-loader' />
+              </div>
               <Tabs type="card">
                 <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="1">
                   <Row type="flex" justify="space-between" align="middle">

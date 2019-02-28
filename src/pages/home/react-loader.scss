@@ -1,0 +1,23 @@
+@import '~loaders.css/src/animations/ball-spin-fade-loader.scss';
+$primary-color: #007bff;
+
+.loader-hidden {
+  display: none;
+}
+
+.loader-active {
+  display: block;
+}
+
+// 加载组件，层级一定要最高。
+.loader-layer {
+  z-index: 9999;
+  position: absolute;
+  top: 20%;
+  left: 50%;
+}
+
+// 这里的类名就是使用的动画类名称，div是动画的DOM
+.ball-spin-fade-loader > div {
+  background: $primary-color;
+}
