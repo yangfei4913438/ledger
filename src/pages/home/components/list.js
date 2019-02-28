@@ -15,8 +15,7 @@ class List extends PureComponent {
   };
 
   render() {
-    const { list, deleteItem, choose_date, categorys } = this.props;
-    console.log(categorys);
+    const { list, deleteItem, choose_date } = this.props;
     // 在显示组件里面进行过滤即可。。。
     let arr = choose_date ? list.filter(o => o.date.includes(choose_date)) : list;
     return (
@@ -50,7 +49,6 @@ const mapStateToProps = (state) => {
   return {
     // 使用的时候，转换成标准JS来处理
     list: state.getIn(['home', 'list']) ? state.getIn(['home', 'list']).toJS() : null,
-    categories: state.getIn(['home', 'categories']) ? state.getIn(['home', 'categories']).toJS() : null,
     choose_date: state.getIn(['home', 'choose_date'])
   }
 };
