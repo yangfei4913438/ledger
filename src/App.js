@@ -1,7 +1,7 @@
 import React, {PureComponent, Fragment} from 'react';
 import { BrowserRouter, Route } from 'react-router-dom'
 import { Provider } from 'react-redux'
-import './App.css';
+import './App.styl';
 import store from './store'
 import Home from './pages/home'
 
