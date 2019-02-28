@@ -32,7 +32,7 @@ export default (WrappedComponent) => {
                 // 鉴权失败
                 case 101:
                   // 身份异常，清理本机数据，跳转登陆页面
-                  LocalStorage.clearNMS();
+                  LocalStorage.clearValue(['token', 'lang']);
                   message.error(jsonLang.http_err.err101, 5, window.location.replace('/'));
                   break;
                 // 其他未定义错误
