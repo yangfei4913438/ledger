@@ -16,7 +16,7 @@ class Category extends PureComponent {
   render () {
     const TabPane = Tabs.TabPane;
     const { income_cid, expense_cid, activeKey, categories, onSelectCategory, onSelectTab } = this.props;
-    const list = Array.split_array(categories, 4);
+    const list = Array.split_array(categories, 5);
     return (
       <Fragment>
         <Tabs type="card" activeKey={ activeKey } onChange={onSelectTab}>
@@ -27,10 +27,13 @@ class Category extends PureComponent {
                   <Row className={'icon-row'} type="flex" justify="space-around" align="middle" key={idx}>
                     {
                       item.map((row, idx2) =>{
-                        const iconClass = row.id === income_cid ? 'category-icon active' : 'category-icon';
+                        const iconClass = row.id === income_cid ? 'App-font-icon active' : 'App-font-icon normal';
                         return (
-                          <Col span={3} className={iconClass} key={idx2} onClick={() => onSelectCategory('income', row.id)}>
-                            <FontAwesomeIcon icon={row.icon}/> {row.name}
+                          <Col span={3} className={'category-icon'} key={idx2} onClick={() => onSelectCategory('income', row.id)}>
+                            <div className={iconClass}>
+                              <FontAwesomeIcon icon={row.icon} size={'2x'}/>
+                            </div>
+                            <div>{row.name}</div>
                           </Col>
                         )
                       })
@@ -47,10 +50,13 @@ class Category extends PureComponent {
                   <Row className={'icon-row'} type="flex" justify="space-around" align="middle" key={idx}>
                     {
                       item.map((row, idx2) =>{
-                        const iconClass = row.id === expense_cid ? 'category-icon active' : 'category-icon';
+                        const iconClass = row.id === expense_cid ? 'App-font-icon active' : 'App-font-icon normal';
                         return (
-                          <Col span={3} className={iconClass} key={idx2} onClick={() => onSelectCategory('expense', row.id)}>
-                            <FontAwesomeIcon icon={row.icon}/> {row.name}
+                          <Col span={3} className={'category-icon'} key={idx2} onClick={() => onSelectCategory('expense', row.id)}>
+                            <div className={iconClass}>
+                              <FontAwesomeIcon icon={row.icon} size={'2x'}/>
+                            </div>
+                            <div>{row.name}</div>
                           </Col>
                         )
                       })
