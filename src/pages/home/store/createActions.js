@@ -49,8 +49,8 @@ export const initData = () => {
   return async (dispatch) => {
     dispatch(modifyListLoaderStatus(true));
     try {
-      const results = await Promise.all([axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')]);
-      const [ list, categories ] = results;
+      // 没有依赖关系的异步操作，可以写成并发请求哦 :)
+      const [ list, categories ] = await Promise.all([axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')]);
       dispatch(setInitData(list.data, categories.data));
       dispatch(modifyListLoaderStatus(false));
     } catch (e) {
