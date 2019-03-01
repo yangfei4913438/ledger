@@ -23,3 +23,6 @@ export const modifyIsEdit = 'home/modifyIsEdit';
 
 // 修改是否显示创建组件
 export const modifyShowCreate = 'home/modifyShowCreate';
+
+// 修改list加载动画的状态
+export const modifyListLoaderStatus = 'home/modifyListLoaderStatus';

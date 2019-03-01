@@ -81,7 +81,7 @@
     "start": "concurrently \"node scripts/start.js\"  \"yarn mock\" ",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "mock": "json-server --watch db.json --routes routes.json --port 5000"
+    "mock": "json-server --watch db.json --routes routes.json --port 5000 -d 1000"
   },
   "proxy": "http://localhost:5000/",
   "eslintConfig": {

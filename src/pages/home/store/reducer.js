@@ -21,6 +21,9 @@ export default (state=defaultState, action) => {
         total_income: action.income
       });
 
+    case types.modifyListLoaderStatus:
+      return state.set('listLoader', action.status);
+
     case types.currentEdit:
       return state.set('current_edit', fromJS(action.item));
 

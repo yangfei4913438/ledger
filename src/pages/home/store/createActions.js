@@ -1,19 +1,33 @@
 import * as types from './actionTypes'
 import axios from 'axios'
 
+// 修改list加载动画的状态
+const modifyListLoaderStatus = (status) => {
+  return {
+    type: types.modifyListLoaderStatus,
+    status
+  }
+};
+
 // 选择日期, 查询数据
 export const chooseDate = (val) => {
   // 异步必须通过这种方式来处理。
   return (dispatch) => {
+    // 显示加载动画
+    dispatch(modifyListLoaderStatus(true));
     // 如果为空，就是全部查，有值就是模糊查询
     let url = val ? '/api/v1/list?date_like=' + val : '/api/v1/list';
     axios.get(url)
       .then(res => {
         // 更新查询关键字
-        dispatch(chooseDateSet(res.data, val))
+        dispatch(chooseDateSet(res.data, val));
+        // 关闭加载动画
+        dispatch(modifyListLoaderStatus(false));
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
+        // 关闭加载动画
+        dispatch(modifyListLoaderStatus(false));
       })
   };
 };
@@ -33,14 +47,17 @@ export const initData = () => {
   // redux-thunk 支持这里的返回值为函数类型
   // 这个函数自动接收dispatch方法作为参数
   return (dispatch) => {
+    dispatch(modifyListLoaderStatus(true));
     const arr = [axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')];
     Promise.all(arr)
       .then(arr => {
         const [list, categories] = arr;
-        dispatch(setInitData(list.data, categories.data))
+        dispatch(setInitData(list.data, categories.data));
+        dispatch(modifyListLoaderStatus(false));
       })
       .catch(err => {
-        console.log(err)
+        console.log(err);
+        dispatch(modifyListLoaderStatus(false));
       })
   }
 };

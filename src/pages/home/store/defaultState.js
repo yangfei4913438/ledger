@@ -14,5 +14,6 @@ export const defaultState = fromJS({
   expense_cid: -1,
   activeKey: 'income',
   isEdit: false,
-  showCreate: false
+  showCreate: false,
+  listLoader: false
 });

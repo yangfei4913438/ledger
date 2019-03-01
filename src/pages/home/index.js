@@ -30,7 +30,7 @@ class Home extends PureComponent {
 
   render() {
     // 数据映射
-    const { defaultLang, list, showCreate } = this.props;
+    const { defaultLang, list, showCreate, listLoader } = this.props;
     // 方法映射
     const { changeLang, downloadExcel, selectDate } = this.props;
     // antd 标签页组件
@@ -58,9 +58,7 @@ class Home extends PureComponent {
                   </Radio.Group>
                 </Col>
               </Row>
-              <div className={'loader-layer'}>
-                <Loader active={true} type='ball-spin-fade-loader' />
-              </div>
+              { listLoader && <Loader active={true} type='ball-spin-fade-loader' innerClassName='loader-layer' /> }
               <Tabs type="card">
                 <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="1">
                   <Row type="flex" justify="space-between" align="middle">
@@ -98,6 +96,7 @@ const mapStatesToProps = (state) => {
   return {
     defaultLang: state.getIn(['home', 'defaultLang']),
     showCreate: state.getIn(['home', 'showCreate']),
+    listLoader: state.getIn(['home', 'listLoader']),
     list: state.getIn(['home', 'list']) ? state.getIn(['home', 'list']).toJS() : null
   }
 };
