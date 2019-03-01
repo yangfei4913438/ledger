@@ -123,7 +123,6 @@ const mapDispatchToProps = (dispatch) => {
     },
     // 选中日期
     selectDate (e, v) {
-      console.log(e, v);
       dispatch(createActions.chooseDate(v));
     },
     // 修改语言
