@@ -177,6 +177,18 @@
       ],
       "date": "2019-03-01",
       "id": 8
+    },
+    {
+      "event": "月工资",
+      "price": 88888,
+      "type": "income",
+      "cid": 1,
+      "icon": [
+        "fas",
+        "hand-holding-usd"
+      ],
+      "date": "2019-03-01",
+      "id": 9
     }
   ],
   "test": [

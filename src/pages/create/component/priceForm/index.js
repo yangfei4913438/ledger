@@ -20,7 +20,7 @@ const tailFormItemLayout = {
   },
 };
 
-class PriceForm extends PureComponent {
+export class PriceForm extends PureComponent {
   constructor(props){
     super(props);
     this.state = {
@@ -122,7 +122,7 @@ class PriceForm extends PureComponent {
               initialValue: isEdit && current_edit ? current_edit.event : null,
               rules: [
                 { required: true, message: 'Please input your title!' },
-                { min: 3, message: '标题的最小长度为3个字符!' }
+                { min: 2, message: '标题的最小长度为2个字符!' }
               ],
             })(
               <Input placeholder="请输入标题" maxLength={8} id="title"/>

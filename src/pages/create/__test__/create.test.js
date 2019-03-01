@@ -1,7 +1,6 @@
 import React from 'react';
 import { shallow } from 'enzyme';
-import Category from '../component/category/index'
-
+import Category from '../component/category'
 
 const categorys = [
   {
@@ -24,7 +23,6 @@ const categorys = [
 const props = {
   categorys
 };
-
 
 let wrapper;
 

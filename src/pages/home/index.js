@@ -15,7 +15,8 @@ import './home.styl'
 import Loader from 'react-loaders'
 import './react-loader.scss'
 
-class Home extends PureComponent {
+// export 是为了单元测试，剥离外层的高阶组件。
+export class Home extends PureComponent {
   componentDidMount () {
     // 初始化数据
     this.props.initData();
@@ -44,18 +45,11 @@ class Home extends PureComponent {
             <Fragment>
               <Row style={{height: '60px', borderBottom: '1px solid #ccc', marginBottom: '15px'}}
                    type="flex" justify="space-between" align="middle">
-                <Col span={4}>
+                <Col span={8}>
                   <MonthPicker onChange={selectDate}/>
                 </Col>
-                <Col span={9} pull={2} className={'App-title-font'}>
+                <Col span={16} className={'App-title-font'}>
                   <TotalPrice />
-                </Col>
-                <Col span={6} style={{textAlign: 'right'}}>
-                  <Radio.Group defaultValue={defaultLang} buttonStyle="solid" size={"default"} onChange={changeLang}>
-                    <Radio.Button value="zh-cn">简体中文</Radio.Button>
-                    <Radio.Button value="zh-tw">繁體中文</Radio.Button>
-                    <Radio.Button value="en">English</Radio.Button>
-                  </Radio.Group>
                 </Col>
               </Row>
               { listLoader && <Loader active={true} type='ball-spin-fade-loader' innerClassName='loader-layer' /> }
@@ -94,7 +88,6 @@ class Home extends PureComponent {
 // 映射数据
 const mapStatesToProps = (state) => {
   return {
-    defaultLang: state.getIn(['home', 'defaultLang']),
     showCreate: state.getIn(['home', 'showCreate']),
     listLoader: state.getIn(['home', 'listLoader']),
     list: state.getIn(['home', 'list']) ? state.getIn(['home', 'list']).toJS() : null
@@ -124,22 +117,6 @@ const mapDispatchToProps = (dispatch) => {
     // 选中日期
     selectDate (e, v) {
       dispatch(createActions.chooseDate(v));
-    },
-    // 修改语言
-    changeLang (e) {
-      // 这里不需要直接更新state，最后也没重载的时候，componentWillMount 方法会自动将设置好的值，赋值到state中。
-      switch (e.target.value) {
-        case 'zh-cn':
-          LocalStorage.setValue('lang', 'zh-cn');
-          break;
-        case 'zh-tw':
-          LocalStorage.setValue('lang', 'zh-tw');
-          break;
-        default:
-          LocalStorage.setValue('lang', 'en');
-      }
-      // 更新语言后，需要手动刷新一次页面。
-      window.location.reload();
     },
     // 下载 Excel 表格
     downloadExcel (list) {
