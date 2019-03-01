@@ -46,19 +46,17 @@ const chooseDateSet = (list, val) => {
 export const initData = () => {
   // redux-thunk 支持这里的返回值为函数类型
   // 这个函数自动接收dispatch方法作为参数
-  return (dispatch) => {
+  return async (dispatch) => {
     dispatch(modifyListLoaderStatus(true));
-    const arr = [axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')];
-    Promise.all(arr)
-      .then(arr => {
-        const [list, categories] = arr;
-        dispatch(setInitData(list.data, categories.data));
-        dispatch(modifyListLoaderStatus(false));
-      })
-      .catch(err => {
-        console.log(err);
-        dispatch(modifyListLoaderStatus(false));
-      })
+    try {
+      const results = await Promise.all([axios.get('/api/v1/list?_sort=id&_order=desc'), axios.get('/api/v1/categories')]);
+      const [ list, categories ] = results;
+      dispatch(setInitData(list.data, categories.data));
+      dispatch(modifyListLoaderStatus(false));
+    } catch (e) {
+      console.log(e);
+      dispatch(modifyListLoaderStatus(false));
+    }
   }
 };
 
