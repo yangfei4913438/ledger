@@ -6,6 +6,12 @@
 # production
 /build
 
+# 测试文件
+/coverage
+
+# 快照文件
+**/__snapshots__/
+
 # misc
 .idea
 .DS_Store
