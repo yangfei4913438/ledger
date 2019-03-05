@@ -115,7 +115,17 @@
   "jest": {
     "collectCoverageFrom": [
       "src/**/*.{js,jsx,ts,tsx}",
-      "!src/**/*.d.ts"
+      "!src/**/*.d.ts",
+      "!src/store/*",
+      "!src/pages/withWrapper/*",
+      "!src/pages/home/store/*",
+      "!src/pages/create/index.js",
+      "!src/App.js",
+      "!src/axios.js",
+      "!src/index.js",
+      "!src/testui.js",
+      "!src/setupTests.js",
+      "!src/lang/*"
     ],
     "resolver": "jest-pnp-resolver",
     "setupFiles": [
@@ -152,7 +162,15 @@
       "web.jsx",
       "jsx",
       "node"
-    ]
+    ],
+    "coverageThreshold": {
+      "global": {
+        "branches": 85,
+        "functions": 85,
+        "lines": 85,
+        "statements": 85
+      }
+    }
   },
   "babel": {
     "presets": [
