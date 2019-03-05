@@ -61,6 +61,7 @@
     "react-dom": "^16.7.0",
     "react-loaders": "^3.0.1",
     "react-redux": "^6.0.0",
+    "react-responsive": "^6.1.1",
     "react-router-dom": "^4.3.1",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.8",
@@ -81,11 +82,17 @@
     "start": "concurrently \"node scripts/start.js\"  \"yarn mock\" ",
     "build": "node scripts/build.js",
     "test": "node scripts/test.js",
-    "mock": "json-server --watch db.json --routes routes.json --port 5000 -d 1000"
+    "mock": "json-server --watch db.json --routes routes.json --port 5000 -d 300"
   },
   "proxy": "http://localhost:5000/",
   "eslintConfig": {
-    "extends": "react-app"
+    "extends": "react-app",
+    "globals": {
+      "shallow": true,
+      "render": true,
+      "mount": true,
+      "sinon": true
+    }
   },
   "browserslist": [
     ">0.2%",
@@ -98,7 +105,9 @@
     "concurrently": "^4.1.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.8.0",
+    "enzyme-to-json": "^3.3.5",
     "json-server": "^0.14.2",
+    "sinon": "^7.2.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^3.0.2"
   },

@@ -1,9 +1,8 @@
 import React, { PureComponent, Fragment } from 'react';
-import { Row, Col, Button, Tabs, DatePicker, Radio } from 'antd';
+import { Row, Col, Button, Tabs, DatePicker } from 'antd';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { jsonLang } from '../../lang'
 import ExportJsonExcel from 'js-export-excel';
-import { LocalStorage } from 'yf-jstools'
 import List from './components/list'
 import TotalPrice from './components/totalPrice'
 import { connect } from 'react-redux'
@@ -31,9 +30,9 @@ export class Home extends PureComponent {
 
   render() {
     // 数据映射
-    const { defaultLang, list, showCreate, listLoader } = this.props;
+    const { list, showCreate, listLoader } = this.props;
     // 方法映射
-    const { changeLang, downloadExcel, selectDate } = this.props;
+    const { downloadExcel, selectDate } = this.props;
     // antd 标签页组件
     const TabPane = Tabs.TabPane;
     // antd 月份选择组件

@@ -1,4 +1,4 @@
-import React, { Fragment } from 'react';
+import React from 'react';
 import logo from '../../logo.svg';
 import { Row, Col, Radio } from 'antd';
 import './index.styl'

@@ -3,7 +3,7 @@ import { jsonLang } from '../../../lang/index'
 import { connect } from 'react-redux'
 
 
-class TotalPrice extends PureComponent {
+export class TotalPrice extends PureComponent {
   render() {
     const { total_income, total_expense } = this.props;
     return (

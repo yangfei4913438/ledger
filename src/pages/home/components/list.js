@@ -6,7 +6,7 @@ import { connect } from 'react-redux'
 import { createActions } from '../store'
 import { withRouter } from 'react-router-dom'
 
-class List extends PureComponent {
+export class List extends PureComponent {
   // 修改组件
   modifyItem = (item) => {
     this.props.currentEdit(item);
@@ -31,10 +31,10 @@ class List extends PureComponent {
                 <Col span={4} className="App-layout-col">{ item.type === 'income' ? `+${item.price}` : `-${item.price}` }</Col>
                 <Col span={4} className="App-layout-col">{ item.date }</Col>
                 <Col span={2} className="App-layout-col">
-                  <Button type="primary" onClick={() => this.modifyItem(item)}>{jsonLang.btn.edit}</Button>
+                  <Button type="primary" className={'TestBtnUpdate'} onClick={() => this.modifyItem(item)}>{jsonLang.btn.edit}</Button>
                 </Col>
                 <Col span={2} className="App-layout-col">
-                  <Button type="danger" onClick={() => deleteItem(item.id)}>{jsonLang.btn.del}</Button>
+                  <Button type="danger" className={'TestBtnDel'} onClick={() => deleteItem(item.id)}>{jsonLang.btn.del}</Button>
                 </Col>
               </Row>
             )

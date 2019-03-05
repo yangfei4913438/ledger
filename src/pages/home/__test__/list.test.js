@@ -1,80 +1,55 @@
 import React from 'react';
-import { shallow } from 'enzyme';
-import List from '../components/list'
+import { Button } from 'antd';
+import { List } from '../components/list'
+import db from '../../../../db.json'
 
-const list = [
-  {
-    id: 1,
-    event: '去云南旅游',
-    price: 200,
-    date: '2019-01-01',
-    type: 'expense',
-    icon: ['fas','plane']
-  },
-  {
-    id: 2,
-    event: '奖金收入',
-    price: 80000,
-    date: '2019-02-06',
-    type: 'income',
-    icon: ['fas','hand-holding-usd']
-  }
-];
+// 字体库
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fas, far, fab);
 
 const props = {
-  list,
-  modifyItem: jest.fn(), // 给模拟点击事件响应
-  deleteItem: jest.fn()
+  list: db.list,
+  choose_date: null,
+  modifyIsEdit: sinon.spy(), // mock一个函数，然后，属性就可以接收到各种操作信息。
+  modifyShowCreate: sinon.spy(),
+  currentEdit: sinon.spy(),
+  deleteItem: sinon.spy()
 };
 
 let wrapper;
 describe('测试价格列表组件', () => {
   // 每次测试前都会执行
   beforeEach(() => {
-    wrapper = shallow(<List {...props}/>);
+    wrapper = mount(<List {...props}/>);
   });
   it('匹配组件快照', () => {
     expect(wrapper).toMatchSnapshot()
   });
-  it('渲染出的列表行，数量是否正确', () => {
-    expect(wrapper.find('.App-layout-row').length).toEqual(list.length);
+  it('检查列表中的button数量', () => {
+    // console.log(JSON.stringify(wrapper.props().list), db.list.length);
+    expect(wrapper.find(Button).length).toEqual(db.list.length * 2);
   });
-  it('渲染出的列表行，图标是否正确', () => {
-    const iconList = wrapper.find('.App-rotate-icon');
-    // 测试图标数量
-    expect(iconList.length).toEqual(2);
-    // 测试图标是否正确，测试一个就行了。下同
-    expect(iconList.first().props().icon).toEqual(list[0].icon)
+  it('检查修改操作', ()=>{
+    // 调用函数
+    wrapper.find('.TestBtnUpdate').first().simulate('click');
+    // 验证函数调用次数是否为1【注意：这里是累计值】
+    expect(props.currentEdit.callCount).toEqual(1);
+    expect(props.modifyIsEdit.callCount).toEqual(1);
+    expect(props.modifyShowCreate.callCount).toEqual(1);
+    // 传参检查
+    expect(props.currentEdit.calledWith(db.list[0])).toBe(true);
+    expect(props.modifyIsEdit.calledWith(true)).toBe(true);
+    expect(props.modifyShowCreate.calledWith(true)).toBe(true);
   });
-  it('渲染出的列表行，标题是否正确', () => {
-    // 拿到所有的行
-    const lineList = wrapper.find('.App-layout-row');
-    // 取第一行的所有列
-    const firstLineCols = lineList.first().find('.App-layout-col');
-    // 测试第一行的标题(因为antd组件的原因，所以这里需要通过props().children的方式来获取text内容)
-    expect(firstLineCols.at(1).props().children).toEqual('去云南旅游');
+  it('检查删除操作', ()=>{
+    // 调用函数
+    wrapper.find('.TestBtnDel').first().simulate('click');
+    // 验证函数调用次数是否为1【注意：这里是累计值】
+    expect(props.deleteItem.callCount).toEqual(1);
+    // 验证函数调用的传参
+    expect(props.deleteItem.calledWith(db.list[0].id)).toBe(true);
   });
-  it('渲染出的列表行，金额是否正确', () => {
-    // 拿到所有的行
-    const lineList = wrapper.find('.App-layout-row');
-    // 取第一行的所有列
-    const firstLineCols = lineList.first().find('.App-layout-col');
-    // 测试第一行的标题(因为antd组件的原因，所以这里需要通过props().children的方式来获取text内容)
-    expect(firstLineCols.at(2).props().children).toEqual('-200');
-  });
-  it('模拟鼠标点击事件', () => {
-    // 拿到所有的行
-    const lineList = wrapper.find('.App-layout-row');
-    // 取第一行的所有列
-    const firstLineCols = lineList.first().find('.App-layout-col');
-    // 获取到按钮DOM, 模拟点击第一个按钮
-    firstLineCols.find('Button').first().simulate('click');
-    // 模拟DOM点击事件, 并且传参值为list[0]
-    // 没有参数的方法为 toHaveBeenCalled()
-    // 注意：这里函数的值必须为 jest.fn()，否则无法获得响应
-    expect(props.modifyItem).toHaveBeenCalledWith(list[0]);
-    // 模拟点击第二个按钮
-    firstLineCols.find('Button').at(1).simulate('click');
-    expect(props.deleteItem).toHaveBeenCalledWith(list[0].id);
-  })
 });
