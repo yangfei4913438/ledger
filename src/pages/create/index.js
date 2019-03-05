@@ -1,6 +1,6 @@
 import React, { PureComponent, Fragment } from 'react'
-import Category from './component/category/index'
-import PriceForm from './component/priceForm/index'
+import Category from './component/category'
+import PriceForm from './component/priceForm'
 import './create.styl'
 
 class Create extends PureComponent {

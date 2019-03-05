@@ -2,9 +2,9 @@ import React, { PureComponent, Fragment } from 'react';
 import {Row, Col, Tabs} from 'antd';
 import { Array } from 'yf-jstools'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {jsonLang} from '../../../../lang/index';
+import {jsonLang} from '../../../lang/index';
 import { connect } from 'react-redux'
-import { createActions } from '../../../home/store'
+import { createActions } from '../../home/store/index'
 
 class Category extends PureComponent {
   componentDidMount () {

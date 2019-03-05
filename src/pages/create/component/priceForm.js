@@ -2,7 +2,7 @@ import React, { PureComponent ,Fragment } from 'react';
 import { Form, Input, Button, InputNumber, DatePicker, message } from 'antd';
 import { withRouter } from 'react-router-dom';
 import { connect } from 'react-redux';
-import { createActions } from '../../../home/store';
+import { createActions } from '../../home/store/index';
 import moment from 'moment';
 
 const formItemLayout = {
