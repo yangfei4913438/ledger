@@ -27,5 +27,6 @@
 - 14、jest
 - 15、enzyme
 - 16、sinon
+- 17、core-js
 
 差不多就是这些了吧。

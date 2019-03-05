@@ -6,7 +6,7 @@ import {jsonLang} from '../../../lang/index';
 import { connect } from 'react-redux'
 import { createActions } from '../../home/store/index'
 
-class Category extends PureComponent {
+export class Category extends PureComponent {
   componentDidMount () {
     const { current_edit, isEdit, onSelectTab } = this.props;
     // 如果是编辑状态，就把当前的标签类型，修改成编辑数据的标签类型

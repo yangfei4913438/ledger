@@ -57,7 +57,7 @@ export class Home extends PureComponent {
                   <Row type="flex" justify="space-between" align="middle">
                     <Col span={4}/>
                     <Col span={3} style={{textAlign: 'right'}}>
-                      <Button type="primary" size={"small"} onClick={() => downloadExcel(list)}>{jsonLang.btn.tableDownload}</Button>
+                      <Button type="primary" size={"small"} id={'downloadExcel'} onClick={() => downloadExcel(list)}>{jsonLang.btn.tableDownload}</Button>
                     </Col>
                   </Row>
                   <Button type="primary" className={'App-add-record'} onClick={this.createItem}>

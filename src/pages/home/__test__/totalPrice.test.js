@@ -7,10 +7,10 @@ const props = {
 };
 
 let wrapper;
-describe('测试价格列表组件', () => {
+describe('测试价格汇总组件', () => {
     // 每次测试前都会执行
     beforeEach(() => {
-        wrapper = mount(<TotalPrice {...props}/>);
+        wrapper = shallow(<TotalPrice {...props}/>);
     });
     it('匹配组件快照', () => {
         expect(wrapper).toMatchSnapshot()

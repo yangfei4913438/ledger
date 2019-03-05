@@ -20,10 +20,10 @@ const props = {
 };
 
 let wrapper;
-describe('测试价格列表组件', () => {
+describe('测试记账列表组件', () => {
   // 每次测试前都会执行
   beforeEach(() => {
-    wrapper = mount(<List {...props}/>);
+    wrapper = shallow(<List {...props}/>);
   });
   it('匹配组件快照', () => {
     expect(wrapper).toMatchSnapshot()
