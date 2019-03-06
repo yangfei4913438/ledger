@@ -4,6 +4,11 @@ import echarts from 'echarts';
 import themeJson from '../theme/wonderland'
 
 class PieCharts extends PureComponent {
+	// 组件挂载后，更新图表
+	componentDidMount() {
+		this.createChart();
+	}
+
 	// 组件更新前，先更新图表
 	componentWillUpdate () {
 		this.createChart();
