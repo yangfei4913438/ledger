@@ -189,6 +189,30 @@
       ],
       "date": "2019-03-01",
       "id": 9
+    },
+    {
+      "event": "出售加菲猫",
+      "price": 10000,
+      "type": "income",
+      "cid": 9,
+      "icon": [
+        "fas",
+        "paw"
+      ],
+      "date": "2019-03-06",
+      "id": 10
+    },
+    {
+      "event": "支付宝退款",
+      "price": 9999,
+      "type": "income",
+      "cid": 7,
+      "icon": [
+        "fab",
+        "alipay"
+      ],
+      "date": "2019-03-06",
+      "id": 11
     }
   ],
   "test": [

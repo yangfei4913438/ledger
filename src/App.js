@@ -4,7 +4,7 @@ import { Provider } from 'react-redux'
 import './App.styl';
 import store from './store'
 import Home from './pages/home'
-import Demo from './testui'
+import UI from './ui'
 
 // PureComponent 表示自动使用shouldComponentUpdate生命周期函数，如果没有数据被更新，那么当前组件不会更新.
 // 使用这个组件，那么数据必须全部使用 immutable 对象，否则会有很多的坑！！！
@@ -26,7 +26,7 @@ class App extends PureComponent {
             */}
             <Route path={"/"} exact component={Home} />
             {/* 媒体查询库的使用 */}
-            <Route path={"/ui"} exact component={Demo} />
+            <Route path={"/ui"} exact component={UI} />
           </Fragment>
         </BrowserRouter>
       </Provider>

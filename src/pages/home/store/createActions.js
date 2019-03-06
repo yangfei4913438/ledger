@@ -161,6 +161,14 @@ export const modifyChooseTab = (key) => {
   }
 };
 
+// 修改首页的active key
+export const modifyHomeActiveKey = (key) => {
+	return {
+		type: types.modifyHomeActiveKey,
+		activeKey: key
+	}
+};
+
 // 修改是否编辑状态
 export const modifyIsEdit = (status) => {
   return {

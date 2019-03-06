@@ -42,6 +42,9 @@ export default (state=defaultState, action) => {
     case types.modifyChooseTab:
       return state.set('activeKey', action.activeKey);
 
+		case types.modifyHomeActiveKey:
+			return state.set('homeActiveKey', action.activeKey);
+
     default:
       return state
   }

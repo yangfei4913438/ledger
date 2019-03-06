@@ -13,6 +13,7 @@ import Create from '../create'
 import './home.styl'
 import Loader from 'react-loaders'
 import './react-loader.scss'
+import Chart from './components/chart'
 
 // export 是为了单元测试，剥离外层的高阶组件。
 export class Home extends PureComponent {
@@ -30,9 +31,9 @@ export class Home extends PureComponent {
 
   render() {
     // 数据映射
-    const { list, showCreate, listLoader } = this.props;
+    const { list, showCreate, listLoader, homeActiveKey } = this.props;
     // 方法映射
-    const { downloadExcel, selectDate } = this.props;
+    const { downloadExcel, selectDate, modifyHomeActiveKey } = this.props;
     // antd 标签页组件
     const TabPane = Tabs.TabPane;
     // antd 月份选择组件
@@ -52,8 +53,8 @@ export class Home extends PureComponent {
                 </Col>
               </Row>
               { listLoader && <Loader active={true} type='ball-spin-fade-loader' innerClassName='loader-layer' /> }
-              <Tabs type="card">
-                <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="1">
+              <Tabs type="card" activeKey={ homeActiveKey } onChange={ modifyHomeActiveKey }>
+                <TabPane tab={<span><FontAwesomeIcon icon={['fas','book']}/> {jsonLang.btn.listMode}</span>} key="list">
                   <Row type="flex" justify="space-between" align="middle">
                     <Col span={4}/>
                     <Col span={3} style={{textAlign: 'right'}}>
@@ -73,8 +74,8 @@ export class Home extends PureComponent {
                   </Row>
                   <List />
                 </TabPane>
-                <TabPane tab={<span><FontAwesomeIcon icon={['fas','chart-pie']}/> {jsonLang.btn.chartMode}</span>} key="2">
-                  Content of Tab Pane 2
+                <TabPane tab={<span><FontAwesomeIcon icon={['fas','chart-pie']}/> {jsonLang.btn.chartMode}</span>} key="chart">
+									<Chart/>
                 </TabPane>
               </Tabs>
             </Fragment>
@@ -89,6 +90,7 @@ const mapStatesToProps = (state) => {
   return {
     showCreate: state.getIn(['home', 'showCreate']),
     listLoader: state.getIn(['home', 'listLoader']),
+		homeActiveKey: state.getIn(['home', 'homeActiveKey']),
     list: state.getIn(['home', 'list']) ? state.getIn(['home', 'list']).toJS() : null
   }
 };
@@ -107,6 +109,10 @@ const mapDispatchToProps = (dispatch) => {
     modifyShowCreate (res) {
       dispatch(createActions.modifyShowCreate(res));
     },
+		// 修改首页的active key
+		modifyHomeActiveKey (key) {
+    	dispatch(createActions.modifyHomeActiveKey(key));
+		},
     // 当前编辑对象清空
     currentEditClear () {
       dispatch(createActions.modifyIncomeIconID(-1));

@@ -11,6 +11,7 @@ export const defaultState = fromJS({
   income_cid: -1,
   expense_cid: -1,
   activeKey: 'income',
+	homeActiveKey: 'chart',
   isEdit: false,
   showCreate: false,
   listLoader: false

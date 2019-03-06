@@ -18,6 +18,9 @@ export const modifyExpenseIconID = 'home/modifyExpenseIconID';
 // 修改选中的标签页
 export const modifyChooseTab = 'home/modifyChooseTab';
 
+// 修改首页的active key
+export const modifyHomeActiveKey = 'home/modifyHomeActiveKey';
+
 // 修改是否编辑状态
 export const modifyIsEdit = 'home/modifyIsEdit';
 
